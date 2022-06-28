@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% comment %} <div class="container"> {% endcomment %}
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5" data-masonry='{"percentPosition": true }'>
+        {% for episodes in episodes %}
+        <div class="col mb-2">
+            <div class="card text-bg-light mb-3" style="max-width: 20rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ episodes.guest1 }}
+                        {% if episodes.guest2 is not null %}
+                            <br> {{ episodes.guest2 }}
+                                {% elif episodes.guest3 is not null %}
+                                    <br> {{ episodes.guest3 }}
+                                        {% elif episodes.guest4 is not null %}
+                                            <br> {{ episodes.guest4 }}
+                        {% endif %}
+                    </h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        <a href="{{ episodes.yt_url }}" target="_blank">
+                            {{ episodes.number }} | {{ episodes.date }}
+                        </a>
+                    </h6>
+                    <p class="card-text">{{ episodes.title }}</p>
+                    {% for mentions in mentions %}
+                        {% if episodes.id == mentions.ment_ep_id %}
+                            <a href="{{ mentions.ment_book.amzn_url }}" target="_blank">
+                                <img src={{ mentions.ment_book.image }} class="book-thumb" title="{{ mentions.ment_book.title }}" alt="{{ mentions.ment_book.title }}">
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% comment %} </div> {% endcomment %}
+
+    {% endblock content %}

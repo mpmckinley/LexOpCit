@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    ePISODE lIBRARY vIEW
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Episode</th>
+                <th>Guest</th>
+                <th>Title</th>
+                <th>Link</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for episodes in episodes %}
+            <tr>
+                <td>
+                    <a href="{% url 'episode_detail' episodes.number %}">{{ episodes.number }}</a>
+                </td>
+                <td>{{ episodes.guest }}</td>
+                <td>{{ episodes.title }}</td>
+                <td>{{ episodes.yt_url }}</td>
+                <td>{{ episodes.tags }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock content %}

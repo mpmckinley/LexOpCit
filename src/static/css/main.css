@@ -1,0 +1,43 @@
+img.book-thumb {
+     border-radius: 3px;
+     width: 30%;
+     vertical-align: middle;
+     margin-top: 2px;
+}
+
+img.book-library-thumb {
+     border-radius: 3px;
+     width: 100%;
+     vertical-align: middle;
+     margin-top: 2px;
+    align-items: center;
+}
+
+.container {
+    margin-top: 2%;
+    width: 100%;
+}
+
+td.book-home {
+    width: 80%;
+    vertical-align: auto;
+}
+
+table {
+    width: 100%;
+}
+
+td.library-td {
+    width: 5%;
+}
+
+a[href ^= 'https://amzn.to/'] {
+    text-decoration: none;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    }
