@@ -31,6 +31,19 @@ td.library-td {
     width: 5%;
 }
 
+td.eph-lead {
+    width: 5%;
+}
+
+tr.eph_body {
+    text-align: center;
+}
+
+table.ephemera {
+    text-align: center; 
+    vertical-align: middle;
+}
+
 a[href ^= 'https://amzn.to/'] {
     text-decoration: none;
 }

@@ -23,7 +23,7 @@ class Book(models.Model):
     title       = models.TextField()
     author      = models.TextField()
     amzn_url    = models.TextField()
-    tb_url      = models.TextField(null=True)
+    tb_url      = models.TextField(null=True, blank=True)
     image       = models.TextField()
 
     def __str__(self):
@@ -37,4 +37,17 @@ class Mentions(models.Model):
 
     def __str__(self):
         return f"{self.ment_ep} --- {self.ment_book}"
+
+class Ephemera(models.Model):
+    eph_ep      = models.ForeignKey(Episode, on_delete=models.CASCADE)
+    film        = models.TextField(null=True, blank=True)
+    paper       = models.TextField(null=True, blank=True)
+    podcast     = models.TextField(null=True, blank=True)
+    music       = models.TextField(null=True, blank=True)
+    video       = models.TextField(null=True, blank=True)
+    games       = models.TextField(null=True, blank=True)
+    art         = models.TextField(null=True, blank=True)
+    link        = models.TextField()
+    class Meta:
+        verbose_name_plural = "ephemera"
 

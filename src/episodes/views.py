@@ -1,6 +1,6 @@
 from multiprocessing import context
 from django.shortcuts import render
-from .models import Episode, Book, Mentions
+from .models import Ephemera, Episode, Book, Mentions
 
 # Create your views here.
 def book_library(request):

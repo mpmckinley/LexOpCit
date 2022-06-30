@@ -1,7 +1,8 @@
+from itertools import groupby
 from multiprocessing import context
 from django.http import HttpResponse
 from django.shortcuts import render
-from episodes.models import Episode, Mentions, Book
+from episodes.models import Episode, Mentions, Ephemera
 
 # Create your views here.
 def home_view(request):
@@ -21,8 +22,9 @@ def about_view(request, *args, **kwargs):
     }
     return render(request, 'about.html', context)
 
-def ephemera_view (request, *args, **kwargs):
+def ephemera_view(request):
+    ephemera = Ephemera.objects.all().order_by('eph_ep')
     context = {
-        "title": "- Ephemera",
+        'ephemera': ephemera,
     }
-    return render(request, 'ephemera.html', context)
+    return render (request, "ephemera.html", context)
