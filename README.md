@@ -16,3 +16,6 @@ LexOpCit.com
   Episodes - no detail view yet
   
 ## templates = all templates
+
+## Data Model
+<img width="704" alt="image" src="https://user-images.githubusercontent.com/6133032/177001174-3ae851bc-d0cf-4a00-8dac-63b680d0c089.png">
