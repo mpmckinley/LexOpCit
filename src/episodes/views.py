@@ -38,3 +38,10 @@ def episode_detail(request, pk):
         'title': '- Episodes'
     }
     return render(request, "episode/episode_detail.html", context)
+
+def ephemera_view(request):
+    ephemera = Ephemera.objects.all().order_by('eph_ep')
+    context = {
+        'ephemera': ephemera,
+    }
+    return render (request, "ephemera.html", context)

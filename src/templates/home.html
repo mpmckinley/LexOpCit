@@ -3,7 +3,8 @@
 {% block content %}
 
 {% comment %} <div class="container"> {% endcomment %}
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5" data-masonry='{"percentPosition": true }'>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 grid">
+     {% comment %} data-masonry='{"percentPosition": true }' {% endcomment %}
         {% for episodes in episodes %}
         <div class="col mb-2">
             <div class="card text-bg-light mb-3" style="max-width: 20rem;">
@@ -23,18 +24,22 @@
                         </a>
                     </h6>
                     <p class="card-text">{{ episodes.title }}</p>
-                    {% for mentions in mentions %}
-                        {% if episodes.id == mentions.ment_ep_id %}
-                            <a href="{{ mentions.ment_book.amzn_url }}" target="_blank">
-                                <img src={{ mentions.ment_book.image }} class="book-thumb" title="{{ mentions.ment_book.title }}" alt="{{ mentions.ment_book.title }}">
-                            </a>
-                        {% endif %}
-                    {% endfor %}
+                        {% for mentions in mentions %}
+                            {% if episodes.id == mentions.ment_ep_id %}
+                                <a href="{{ mentions.ment_book.amzn_url }}" target="_blank">
+                                    <img src={{ mentions.ment_book.image }} class="book-thumb" title="{{ mentions.ment_book.title }}" alt="{{ mentions.ment_book.title }}">
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </p>
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
-{% comment %} </div> {% endcomment %}
+
+    <script>
+
+    </script>
 
     {% endblock content %}

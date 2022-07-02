@@ -22,9 +22,3 @@ def about_view(request, *args, **kwargs):
     }
     return render(request, 'about.html', context)
 
-def ephemera_view(request):
-    ephemera = Ephemera.objects.all().order_by('eph_ep')
-    context = {
-        'ephemera': ephemera,
-    }
-    return render (request, "ephemera.html", context)

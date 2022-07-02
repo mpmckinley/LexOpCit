@@ -16,8 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from pages.views import home_view, ephemera_view, about_view
-from episodes.views import episode_library, episode_detail, book_detail, book_library
+from pages.views import home_view, about_view
+from episodes.views import episode_library, episode_detail, book_detail, book_library, ephemera_view
 
 urlpatterns = [
     path('', home_view, name='home'),
