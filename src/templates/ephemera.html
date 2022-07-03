@@ -8,77 +8,48 @@
             <p class="col-md-8 fs-6">An optimum effort at compiling all other than books. Not comprehensive; film, paper, essay, podcast, video, music, TV, and game mentions of note discussed by Lex and his guests.</p>
         </div>
     </div>
-
-
-    {% regroup ephemera by eph_ep as ep_list %}
-        {{ ep_list }}
-        {% for eph_ep in ep_list %}
-        <hr>
-        <div class="row">
-            <div class="row">
-                <div class="col-2">
-                    {{ eph_ep.grouper }}
-                </div>
-                <div class="col">
-                    {% for film in ep_list.list %}
-                        {{ ephemera }}
-                    {% endfor %}
-                </div>
-                <div class="col">
-                    {% for podcast in eph_ep.list %}
-                        <a href="{{ link }}">{{ podcast.podcast }}</a>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-        
-                            {% comment %} {% for film in ep_list.list %}
-                                {% if film.film is not blank %}
-                                    {{ film.film }}
-                                {% endif %}
-                            {% endfor %} {% endcomment %}
-        
-                {% comment %} <a href="{{ object.link }}">{{ paper.paper }}</a><br>
-                    <a href="{{ object.link }}">{{ music.music }}</a><br>
-                    <a href="{{ object.link }}">{{ video.video }}</a><br>
-                    <a href="{{ object.link }}">{{ games.games }}</a><br>
-                    <a href="{{ object.link }}">{{ art.art }}</a><br> {% endcomment %}
-                            
-                        {% comment %} {% endfor %} {% endcomment %}
-
-                        {% comment %} {% for film in object.film %} {% endcomment %}
-                            {% comment %} <a href="{{ link }}">{{ film }}</a><br> {% endcomment %}
-                        {% comment %} {% endfor %} {% endcomment %}
-                            {% comment %} {% if object.film is not null %} {% endcomment %}
-                            {% comment %} {{ object }} {% endcomment %}
-                            {% comment %} {% if film.film is not null %} {% endcomment %}
-{% comment %} 
-
-                            {% comment %} {% endif %} {% endcomment %}
-                            {% comment %} {% endif %} {% endcomment %}
-                        {% comment %} {% endfor %} {% endcomment %}
-    {% comment %} </tr> {% endcomment %}
-
+    
     <table class="table ephemera">
         <thead>
             <tr>
-                <th></th>
-                <th><i class="fa-solid fa-film fa-2x"></i></th>
-                <th><i class="fa-solid fa-file-pen fa-2x"></i></i></th>
-                <th><i class="fa-solid fa-podcast fa-2x"></i></th>
-                <th><i class="fa-solid fa-music fa-2x"></i></th>
-                <th><i class="fa-solid fa-tv fa-2x"></i></i></th>
-                <th><i class="fa-solid fa-gamepad fa-2x"></i></th>
-                <th><i class="fa-solid fa-palette fa-2x"></i></i></th>
+                <th class="eph-lead"></th>
+                <th class="eph-content"><i class="fa-solid fa-film fa-2x"></i></th>
+                <th class="eph-content"><i class="fa-solid fa-file-pen fa-2x"></i></i></th>
+                <th class="eph-content"><i class="fa-solid fa-podcast fa-2x"></i></th>
+                <th class="eph-content"><i class="fa-solid fa-music fa-2x"></i></th>
+                <th class="eph-content"><i class="fa-solid fa-tv fa-2x"></i></i></th>
+                <th class="eph-content"><i class="fa-solid fa-gamepad fa-2x"></i></th>
+                <th class="eph-content"><i class="fa-solid fa-palette fa-2x"></i></i></th>
             </tr>
         </thead>
         <tbody>
-            {% comment %} {% for film in ep_list %}
-            <td><a href="{{ ephemera.link }}">{{ ephemera.film }}</a></td>
-            {% endfor %} {% endcomment %}
-            {% comment %} {% endfor %} {% endcomment %}
-            {% comment %} {% endfor %} {% endcomment %}
+            {% regroup ephemera by eph_ep as ep_list %}
+                EP_LIST: {{ ep_list }}
+                {% for eph_ep in ep_list %}
+                {% comment %} See return of NULL values in below FOR statements {% endcomment %}
+                    <tr>
+                        <td>
+                            {{ eph_ep.grouper }}
+                        </td>
+                        <td>
+                            {% for film in eph_ep.list %}
+                                <a href="{{ link }}">{{ film.film }}</a>
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td></td>
+                        <td>
+                            {% for podcast in eph_ep.list %}
+                                <a href="{{ link }}">{{ podcast.podcast }}</a>
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                {% endfor %}
         </tbody>
     </table>
 
