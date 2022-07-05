@@ -16,19 +16,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from pages.views import home_view, about_view
-from episodes.views import episode_library, episode_detail, book_detail, book_library, ephemera_view
+from pages.views import home_view, about_view, search_view
+from episodes.views import (episode_library, episode_detail, book_detail, 
+    ephemera_view, FilteredEphemeraListView, FilteredBooksListView)
 
 urlpatterns = [
     path('', home_view, name='home'),
-
-    path('library/', book_library, name='books'),
+    path('episode_search', search_view, name="episode-search"),
+    path('library/', FilteredBooksListView.as_view(), name='books'),
     path('library/<int:pk>/', book_detail, name='book_detail'),
 
     path('episodes/', episode_library, name='episodes'),
     path('episodes/<int:pk>/', episode_detail, name='episode_detail'),
 
     path('ephemera/', ephemera_view, name='ephemera'),
+    path('ephemera_filter/', FilteredEphemeraListView.as_view(), name='ephemera-filter'),
 
     path('about/', about_view, name='about'),
     path('admin/', admin.site.urls),

@@ -33,15 +33,19 @@
                         </td>
                         <td>
                             {% for film in eph_ep.list %}
-                                <a href="{{ link }}">{{ film.film }}</a>
-                                <br>
+                                {% if film.film %}
+                                    <a href="{{ film.link }}">{{ film.film }}</a>
+                                    <br>
+                                {% endif %}
                             {% endfor %}
                         </td>
                         <td></td>
                         <td>
                             {% for podcast in eph_ep.list %}
-                                <a href="{{ link }}">{{ podcast.podcast }}</a>
-                                <br>
+                                {% if podcast.podcast %}
+                                    <a href="{{ podcast.link }}">{{ podcast.podcast }}</a>
+                                    <br>
+                                {% endif %}
                             {% endfor %}
                         </td>
                         <td></td>

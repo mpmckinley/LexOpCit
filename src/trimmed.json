@@ -1,0 +1,306 @@
+[
+        {
+        "model": "episodes.episode", "pk": 1, "fields": {"number": 1, "title": "Something About Discussion and This and That", "guest1": "Michael McKinley", "guest2": "", "guest3": "", "guest4": "", "date": "2001-06-20", "yt_url": "https://www.youtube.com", "tags": "something, tag, another, money, wealth"}}, 
+    {
+        "model": "episodes.episode", "pk": 2, "fields": {"number": 2, "title": "The Latest Thing in the Episode", "guest1": "Lex Fridman", "guest2": "Someone Else", "guest3": "A Third Guest", "guest4": "Fourth McNasty", "date": "2002-06-28", "yt_url": "https://www.youtube.com", "tags": "health, money, anarchy"}}, 
+    {
+        "model": "episodes.episode", "pk": 3, "fields": {"number": 3, "title": "Life, Liberty, and Everything", "guest1": "Daniel Manager", "guest2": "", "guest3": "", "guest4": "", "date": "2003-06-29", "yt_url": "https://www.youtube.com", "tags": "health, wealth, rally, money"}}, 
+    {
+        "model": "episodes.episode", "pk": 4, "fields": {"number": 4, "title": "Something About Discussion and This and That", "guest1": "Mark Something", "guest2": "", "guest3": "", "guest4": "", "date": "2004-06-25", "yt_url": "asd", "tags": "asd"}}, 
+    {
+        "model": "episodes.episode", "pk": 5, "fields": {"number": 5, "title": "Another Title Something", "guest1": "Anthony Nasser", "guest2": "", "guest3": "", "guest4": "", "date": "2005-06-25", "yt_url": "www.google.com", "tags": "www.youtube.com"}}, 
+    {
+        "model": "episodes.episode", "pk": 6, "fields": {"number": 6, "title": "Episode Everything 2", "guest1": "Margaret Something", "guest2": "", "guest3": "", "guest4": "", "date": "2006-08-25", "yt_url": "https://www.google.com", "tags": "something, else, other, more"}}, 
+    {
+        "model": "episodes.episode", "pk": 7, "fields": {"number": 7, "title": "More Than Something Else There", "guest1": "Watership Down", "guest2": "", "guest3": "", "guest4": "", "date": "2022-06-28", "yt_url": "https//www.google.com", "tags": "more, wet, anything"}}, 
+    {
+        "model": "episodes.episode", "pk": 8, "fields": {"number": 1, "title": "Life 3.0", "guest1": "Max Tegmark", "guest2": "", "guest3": "", "guest4": "", "date": "2018-04-19", "yt_url": "https://www.youtube.com/watch?v=Gi8LUnhP5yU", "tags": "one"}}, 
+    {
+        "model": "episodes.episode", "pk": 9, "fields": {"number": 2, "title": "Consciousness ", "guest1": "Christof Koch", "guest2": "", "guest3": "", "guest4": "", "date": "2018-05-29", "yt_url": "https://www.youtube.com/watch?v=piHkfmeU7Wo", "tags": "two"}}, 
+    {
+        "model": "episodes.episode", "pk": 10, "fields": {"number": 3, "title": "AI in the Age of Reason", "guest1": "Steven Pinker", "guest2": "", "guest3": "", "guest4": "", "date": "2018-10-17", "yt_url": "https://www.youtube.com/watch?v=epQxfSp-rdU", "tags": "three"}}, 
+    {
+        "model": "episodes.episode", "pk": 11, "fields": {"number": 4, "title": "Deep Learning", "guest1": "Yoshua Bengio", "guest2": "", "guest3": "", "guest4": "", "date": "2018-10-20", "yt_url": "https://www.youtube.com/watch?v=azOmzumh0vQ", "tags": "one"}}, 
+    {
+        "model": "episodes.episode", "pk": 12, "fields": {"number": 5, "title": "Statistical Learning", "guest1": "Vladimir Vapnik", "guest2": "", "guest3": "", "guest4": "", "date": "2018-11-16", "yt_url": "https://www.youtube.com/watch?v=STFcvzoxVw4", "tags": "two"}}, 
+    {
+        "model": "episodes.episode", "pk": 13, "fields": {"number": 6, "title": "Python", "guest1": "Guido van Rossum", "guest2": "", "guest3": "", "guest4": "", "date": "2018-11-22", "yt_url": "https://www.youtube.com/watch?v=ghwaIiE3Nd8", "tags": "three"}}, 
+    {
+        "model": "episodes.episode", "pk": 14, "fields": {"number": 7, "title": "Stack Overflow and Coding Horror", "guest1": "Jeff Atwood", "guest2": "", "guest3": "", "guest4": "", "date": "2018-11-29", "yt_url": "https://www.youtube.com/watch?v=KZkYSSE8HHI", "tags": "one"}}, 
+    {
+        "model": "episodes.episode", "pk": 15, "fields": {"number": 8, "title": "Google", "guest1": "Eric Schmidt", "guest2": "", "guest3": "", "guest4": "", "date": "2018-12-04", "yt_url": "https://www.youtube.com/watch?v=hIC9FQpxVwQ", "tags": "two"}}, 
+    {
+        "model": "episodes.episode", "pk": 16, "fields": {"number": 9, "title": "Long-Term Future of AI", "guest1": "Stuart Russell", "guest2": "", "guest3": "", "guest4": "", "date": "2018-12-09", "yt_url": "https://www.youtube.com/watch?v=KsZI5oXBC0k", "tags": "three"}}, 
+    {
+        "model": "episodes.episode", "pk": 17, "fields": {"number": 10, "title": "Deep Reinforcement Learning", "guest1": "Pieter Abbeel", "guest2": "", "guest3": "", "guest4": "", "date": "2018-12-16", "yt_url": "https://www.youtube.com/watch?v=l-mYLq6eZPY", "tags": "one"}}, 
+    {
+        "model": "episodes.book", "pk": 1, "fields": {"isbin1": "0123526391", "isbin2": "1245874854152", "title": "First Book Title", "author": "Michael McKinley", "amzn_url": "https://amzn.to/3nlRhcE", "tb_url": "tb.com", "image": "https://images-na.ssl-images-amazon.com/images/I/916Lv1lJ80L.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 2, "fields": {"isbin1": "0060850523", "isbin2": "9780060850524", "title": "Brave New World", "author": "Aldous Huxley", "amzn_url": "https://amzn.to/3y0UXpf", "tb_url": "holder", "image": "https://m.media-amazon.com/images/P/0060850523.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 3, "fields": {"isbin1": "8273647878", "isbin2": "8127h872891", "title": "A New Book Title: Three and Another", "author": "Scott Podder", "amzn_url": "https://amzn.to/3AoNnrl", "tb_url": "thriftbooks.com", "image": "https://m.media-amazon.com/images/P/0142180300.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 4, "fields": {"isbin1": "8h27384989", "isbin2": "829381782990", "title": "A Fourth Manual Add Title", "author": "Michael McKinley", "amzn_url": "https://www.amzn/com/jad921d", "tb_url": "something", "image": "https://m.media-amazon.com/images/P/0684832402.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 5, "fields": {"isbin1": "1q2w3e4r5t0", "isbin2": "1q0pwo98eir7u", "title": "Howard Something Book", "author": "Samuel Malthus", "amzn_url": "https://www.amazon.com", "tb_url": "more", "image": "https://images-na.ssl-images-amazon.com/images/I/61CmYo8NgWL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 6, "fields": {"isbin1": "0060850523", "isbin2": "9780060850524", "title": "Brave New World", "author": "Aldous Huxley", "amzn_url": "https://amzn.to/3nlRhcE", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/81zE42gT3xL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 7, "fields": {"isbin1": "0321486811", "isbin2": "9780321486813", "title": "Compilers: Principles, Techniques, and Tools", "author": "Alfred Aho", "amzn_url": "https://amzn.to/3P0CwYH", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/51vQlx7ig3L.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 8, "fields": {"isbin1": "1264268947", "isbin2": "9781264268948", "title": "Gray Hat Hacking: The Ethical Hacker's Handbook", "author": "Allen Harper", "amzn_url": "https://amzn.to/3bmRGZt", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/51MDl1yIZEL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 9, "fields": {"isbin1": "9780316743006", "isbin2": "9780316743006", "title": "Skunk Works: A Personal Memoir of My Years at Lockheed", "author": "Ben R. Rich", "amzn_url": "https://amzn.to/3QUs3j5", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/91AtxywmfZL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 10, "fields": {"isbin1": "9780307455925", "isbin2": "9780307455925", "title": "Americanah", "author": "Chimamanda Ngozi Adichie", "amzn_url": "https://amzn.to/3Nr5akd", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/81fZ4WCGt7L.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 11, "fields": {"isbin1": "0262533502", "isbin2": "9780262533508", "title": "Consciousness: Confessions of a Romantic Reductionist", "author": "Christof Koch", "amzn_url": "https://amzn.to/3u6f97N", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/913x1GetEkL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 12, "fields": {"isbin1": "1936221047", "isbin2": "9781936221042", "title": "The Quest for Consciousness: A Neurobiological Approach", "author": "Christof Koch", "amzn_url": "https://amzn.to/3Ol8kXX", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/51dM6iGAD0L.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 13, "fields": {"isbin1": "9780156030083", "isbin2": "9780156030083", "title": "Flowers for Algernon", "author": "Daniel Keyes", "amzn_url": "https://amzn.to/3xTNxnu", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/61M6k0TRGrL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 14, "fields": {"isbin1": "9780143121350", "isbin2": "9780143121350", "title": "The Beginning of Infinity: Explanations That Transform the World", "author": "David Deutsch", "amzn_url": "https://amzn.to/39RyLFX", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/81kgWVO7VkL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 15, "fields": {"isbin1": "0375505245", "isbin2": "9780375505249", "title": "Masters of Doom: How Two Guys Created an Empire and Transformed Pop Culture", "author": "David Kushner", "amzn_url": "https://amzn.to/3bt80YW", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/51GECJ7HHFL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 16, "fields": {"isbin1": "0465026567", "isbin2": "9780465026562", "title": "G\u00f6del, Escher, Bach: An Eternal Golden Braid", "author": "Douglas R Hofstadter", "amzn_url": "https://amzn.to/3uq8HZJ", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/61-swt-T2FL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 17, "fields": {"isbin1": "1434442047", "isbin2": "9781434442048", "title": "The Machine Stops", "author": "E.M. Forster", "amzn_url": "https://amzn.to/3QSzzv0", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/71bWCt9GmaL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 18, "fields": {"isbin1": "9781258241780", "isbin2": "9781258241780", "title": "Computers and Thought", "author": "Edward A. Feigenbaum & Julian Feldman", "amzn_url": "https://amzn.to/3a0sKXu", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/51FzWuHjUEL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 19, "fields": {"isbin1": "0465064957", "isbin2": "9780465064953", "title": "Love and Math", "author": "Edward Frenkel", "amzn_url": "https://amzn.to/3xUBvKB", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/611RvIpj1TL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 20, "fields": {"isbin1": "0143110853", "isbin2": "9780143110859", "title": "An American Sickness: How Healthcare Became Big Business and How You Can Take It Back", "author": "Elisabeth Rosenthal", "amzn_url": "https://amzn.to/3I1PzGG", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/81Kugd4MIAL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 21, "fields": {"isbin1": "0691177503", "isbin2": "9780691177502", "title": "Radical Markets: Uprooting Capitalism and Democracy for a Just Society", "author": "Eric A. Posner & E Glen Weyl", "amzn_url": "https://amzn.to/3NrqHcG", "tb_url": "", "image": "https://m.media-amazon.com/images/P/0691177503.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 22, "fields": {"isbin1": "0684832402", "isbin2": "9780684832401", "title": "The Denial of Death", "author": "Ernest Becker", "amzn_url": "https://amzn.to/3OPI1cB", "tb_url": "", "image": "https://m.media-amazon.com/images/P/0684832402.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 23, "fields": {"isbin1": "1107683653", "isbin2": "9781107604667", "title": "What is Life?: With Mind and Matter and Autobiographical Sketches", "author": "Erwin Schrodinger", "amzn_url": "https://amzn.to/3NoMXE6", "tb_url": "", "image": "https://m.media-amazon.com/images/P/1107604664.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 24, "fields": {"isbin1": "1941147429", "isbin2": "9781941147429", "title": "The Black Cloud", "author": "Fred Hoyle\u00a0", "amzn_url": "https://amzn.to/3neQk5Z", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/41qhJdhbtHL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 25, "fields": {"isbin1": "0679734503", "isbin2": "9780679734505", "title": "Crime and Punishment", "author": "Fyodor Dostoevsky", "amzn_url": "https://amzn.to/3AaCzfZ", "tb_url": "", "image": "https://m.media-amazon.com/images/P/0679734503.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 26, "fields": {"isbin1": "9781594203176", "isbin2": "9781594203176", "title": "Guitar Zero: The New Musician and the Science of Learning", "author": "Gary Marcus", "amzn_url": "https://amzn.to/3ywGdja", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/41ppUTzo7QL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 27, "fields": {"isbin1": "054723824X", "isbin2": "9780547238241", "title": "Kluge: The Haphazard Evolution of the Human Mind", "author": "Gary Marcus", "amzn_url": "https://amzn.to/3I3gJgA", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/61maoW29aoL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 28, "fields": {"isbin1": "1524748250", "isbin2": "9781524748258", "title": "Rebooting AI: Building Artificial Intelligence We Can Trust", "author": "Gary Marcus", "amzn_url": "https://amzn.to/3abL9k5", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/810UgEX4fJL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 29, "fields": {"isbin1": "0070420017", "isbin2": "9780070420014", "title": "Language and Communication", "author": "George A. Miller", "amzn_url": "https://amzn.to/3Nr27Zf", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/31R8IOSa7wL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 30, "fields": {"isbin1": "0486256642", "isbin2": "9780486256641", "title": "One Two Three . . . Infinity: Facts and Speculations of Science", "author": "George Gamow", "amzn_url": "https://amzn.to/3OlFZkA", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/71gimL7Qp2L.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 31, "fields": {"isbin1": "0451530659", "isbin2": "9780451530653", "title": "War of the Worlds", "author": "H. G. Wells", "amzn_url": "https://amzn.to/3NBZX9v", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/91F12HQ+8yL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 32, "fields": {"isbin1": "0262035618", "isbin2": "9780262035613", "title": "Deep Learning", "author": "Ian Goodfellow", "amzn_url": "https://amzn.to/3Ok9XVY", "tb_url": "", "image": "https://m.media-amazon.com/images/P/0262035618.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 33, "fields": {"isbin1": "0553293354", "isbin2": "9780553293357", "title": "Foundation", "author": "Isaac Asimov", "amzn_url": "https://amzn.to/3NvEcZ2", "tb_url": "", "image": "https://m.media-amazon.com/images/P/0553293354.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 34, "fields": {"isbin1": "055338256X", "isbin2": "9780553382563", "title": "I, Robot", "author": "Isaac Asimov", "amzn_url": "https://amzn.to/3y3qiaK", "tb_url": "", "image": "https://m.media-amazon.com/images/P/B000FC1PW0.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 35, "fields": {"isbin1": "9780743216302", "isbin2": "9780743216302", "title": "The Double Helix: A Personal Account of the Discovery of the Structure of DNA", "author": "James D. Watson Ph.D.", "amzn_url": "https://amzn.to/39WGJxw", "tb_url": "", "image": "https://m.media-amazon.com/images/P/074321630X.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 36, "fields": {"isbin1": "0915728176", "isbin2": "9780915728176", "title": "A History of Force: Exploring the Worldwide Movement Against Habits of Coercion, Bloodshed, and Mayhem", "author": "James Payne", "amzn_url": "https://amzn.to/3OJYEq3", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/61MrklZM8AL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 37, "fields": {"isbin1": "0375701214", "isbin2": "9780375701214", "title": "The Diving Bell and the Butterfly: A Memoir of Life in Death", "author": "Jean-Dominique Bauby", "amzn_url": "https://amzn.to/3NgfcEZ", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/81GkEn0rLfL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 38, "fields": {"isbin1": "1541675797", "isbin2": "9781541675797", "title": "A Thousand Brains: A New Theory of Intelligence", "author": "Jeff Hawkins", "amzn_url": "https://amzn.to/3QUyfYf", "tb_url": "", "image": "https://m.media-amazon.com/images/P/1541675819.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 39, "fields": {"isbin1": "0805078533", "isbin2": "9780805078534", "title": "On Intelligence: How a New Understanding of the Brain Will Lead to the Creation of Truly Intelligent Machines", "author": "Jeff Hawkins", "amzn_url": "https://amzn.to/3HZ516v", "tb_url": "", "image": "https://m.media-amazon.com/images/P/0805074562.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 40, "fields": {"isbin1": "0358105587", "isbin2": "9780358105589", "title": "AI Superpowers: China, Silicon Valley, and the New World Order", "author": "Kai-Fu Lee", "amzn_url": "https://amzn.to/3njpOsb", "tb_url": "", "image": "https://m.media-amazon.com/images/P/132854639X.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 41, "fields": {"isbin1": "0141439475", "isbin2": "9780141439471", "title": "Frankenstein", "author": "Mary Shelley", "amzn_url": "https://amzn.to/3y8ieWm", "tb_url": "", "image": "https://m.media-amazon.com/images/P/0141439475.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 42, "fields": {"isbin1": "9780141981802", "isbin2": "9780141981802", "title": "Life 3.0", "author": "Max Tegmark", "amzn_url": "https://amzn.to/3xRUEwF", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/81stAN0dMBL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 43, "fields": {"isbin1": "0307744256", "isbin2": "9780307744258", "title": "Our Mathematical Universe", "author": "Max Tegmark", "amzn_url": "https://amzn.to/3OCZcOk", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/916Lv1lJ80L.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 44, "fields": {"isbin1": "0393327000", "isbin2": "9780393327007", "title": "Einstein's Cosmos: How Albert Einstein's Vision Transformed Our Understanding of Space and Time", "author": "Michio Kaku", "amzn_url": "https://amzn.to/3R66zQv", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/61WEicCFS7L.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 45, "fields": {"isbin1": "9780141014630", "isbin2": "9780141014630", "title": "Parallel Worlds: The Science of Alternative Universes and Our Future in the Cosmos", "author": "Michio Kaku", "amzn_url": "https://amzn.to/3Akgtb2", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/71cNrvjN0mL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 46, "fields": {"isbin1": "0307278824", "isbin2": "1234567890123", "title": "Physics of the Impossible: A Scientific Exploration into the World of Phasers, Force Fields, Teleportation, and Time Travel", "author": "Michio Kaku", "amzn_url": "https://amzn.to/3y9rzx4", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/51Oe97zGG8L.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 47, "fields": {"isbin1": "0525434542", "isbin2": "9780525434542", "title": "The Future of Humanity: Our Destiny in the Universe", "author": "Michio Kaku", "amzn_url": "https://amzn.to/3yCBb4Y", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/915MP2kPuwL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 48, "fields": {"isbin1": "0307473341", "isbin2": "9780307473349", "title": "The Future of the Mind: The Scientific Quest to Understand, Enhance, and Empower the Mind", "author": "Michio Kaku", "amzn_url": "https://amzn.to/3OT9OcB", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/81G9pNP94mL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 49, "fields": {"isbin1": "1565844750", "isbin2": "9781565844750", "title": "On Language: Chomsky's Classic Works Language and Responsibility and Reflections on Language", "author": "Noam Chomsky", "amzn_url": "https://amzn.to/39YxSv7", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/51rT6EasmVL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 50, "fields": {"isbin1": "1250773024", "isbin2": "9781250773029", "title": "Ender's Game", "author": "Orson Scott Card", "amzn_url": "https://amzn.to/3A7NRla", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/91P0lfcIEJS.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 51, "fields": {"isbin1": "1250773059", "isbin2": "9781250773050", "title": "Speaker for the Dead", "author": "Orson Scott Card", "amzn_url": "https://amzn.to/3OE7chS", "tb_url": "", "image": "https://m.media-amazon.com/images/P/1250773067.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 52, "fields": {"isbin1": "0716721732", "isbin2": "9780716721734", "title": "Aaron's Code: Meta-Art, Artificial Intelligence and the Work of Harold Cohen", "author": "Pamela McCorduck", "amzn_url": "https://amzn.to/3u8stsc", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/61bSM1m6DWL._SX381_BO1,204,203,200_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 53, "fields": {"isbin1": "1568812051", "isbin2": "9781568812052", "title": "Machines Who Think: A Personal Inquiry into the History and Prospects of Artificial Intelligence", "author": "Pamela McCorduck", "amzn_url": "https://amzn.to/3OvzyLO", "tb_url": "", "image": "https://m.media-amazon.com/images/P/1568812051.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 54, "fields": {"isbin1": "0865345783", "isbin2": "9780865345782", "title": "The Edge of Chaos", "author": "Pamela McCorduck", "amzn_url": "https://amzn.to/3QQmh25", "tb_url": "", "image": "https://m.media-amazon.com/images/P/0865345783.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 55, "fields": {"isbin1": "0330284703", "isbin2": "9780330284707", "title": "The Fifth Generation: Artificial Intelligence and Japan's Computer Challenge to the World", "author": "Pamela McCorduck", "amzn_url": "https://amzn.to/3yrqAtc", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/51w0A+b-qhL._SX306_BO1,204,203,200_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 56, "fields": {"isbin1": "0446673374", "isbin2": "9780446673372", "title": "The Futures of Women: Scenarios for the 21st Century", "author": "Pamela McCorduck", "amzn_url": "https://amzn.to/3u8p9NK", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/41AEyjyRPSL._SX324_BO1,204,203,200_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 57, "fields": {"isbin1": "0359901336", "isbin2": "9780359901333", "title": "This Could Be Important: My Life and Times with the Artificial Intelligentsia", "author": "Pamela McCorduck", "amzn_url": "https://amzn.to/3Ad9jpc", "tb_url": "", "image": "https://m.media-amazon.com/images/P/0359901336.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 58, "fields": {"isbin1": "1558601910", "isbin2": "9781558601918", "title": "Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp", "author": "Peter Norvig", "amzn_url": "https://amzn.to/3uCYWYf", "tb_url": "", "image": "https://m.media-amazon.com/images/P/1558601910.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 59, "fields": {"isbin1": "0393022161", "isbin2": "9780393022162", "title": "The Blind Watchmaker: Why the Evidence of Evolution Reveals a Universe Without Design", "author": "Richard Dawkins", "amzn_url": "https://amzn.to/3niWm5r", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/51gHlHu8biL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 60, "fields": {"isbin1": "0198788606", "isbin2": "9780198788607", "title": "The Selfish Gene", "author": "Richard Dawkins", "amzn_url": "https://amzn.to/3u3t1zB", "tb_url": "", "image": "https://m.media-amazon.com/images/P/0198788606.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 61, "fields": {"isbin1": "0262039249", "isbin2": "9780262039246", "title": "Reinforcement Learning: An Introduction", "author": "Richard S. Sutton", "amzn_url": "https://amzn.to/3QPbi8L", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/418tAqZgpjL._SX384_BO1,204,203,200_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 62, "fields": {"isbin1": "0262161702", "isbin2": "9780262161701", "title": "Affective Computing", "author": "Rosalind W. Picard", "amzn_url": "https://amzn.to/3u4pgd8", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/618C98N9F9L._SX371_BO1,204,203,200_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 63, "fields": {"isbin1": "0452296544", "isbin2": "9789351116943", "title": "From Eternity to Here: The Quest for the Ultimate Theory of Time", "author": "Sean Carroll", "amzn_url": "https://amzn.to/3bwvT1M", "tb_url": "", "image": "https://m.media-amazon.com/images/P/0452296544.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 64, "fields": {"isbin1": "1524743011", "isbin2": "9781524743017", "title": "Something Deeply Hidden", "author": "Sean Carroll", "amzn_url": "https://amzn.to/3byC59q", "tb_url": "", "image": "https://m.media-amazon.com/images/P/1524743011.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 65, "fields": {"isbin1": "1101984252", "isbin2": "9781101984253", "title": "The Big Picture", "author": "Sean Carroll", "amzn_url": "https://amzn.to/3OQuJfX", "tb_url": "", "image": "https://m.media-amazon.com/images/P/1101984252.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 66, "fields": {"isbin1": "1786076063", "isbin2": "9781786076069", "title": "The Particle at the End of the Universe: How the Hunt for the Higgs Boson Leads Us to the Edge of a New World", "author": "Sean Carroll", "amzn_url": "https://amzn.to/3AoNnrl", "tb_url": "", "image": "https://m.media-amazon.com/images/P/0142180300.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 67, "fields": {"isbin1": "0465010636", "isbin2": "9780465010639", "title": "The Children's Machine: Rethinking School In The Age Of The Computer", "author": "Seymour A Papert", "amzn_url": "https://amzn.to/3Ae9tN6", "tb_url": "", "image": "https://m.media-amazon.com/images/P/0465010636.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 68, "fields": {"isbin1": "1439170916", "isbin2": "9781439170915", "title": "The Emperor of All Maladies: A Biography of Cancer", "author": "Siddhartha Mukherjee", "amzn_url": "https://amzn.to/3QX3wKh", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/912ahUJ0q7L.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 69, "fields": {"isbin1": "9780156027601", "isbin2": "9780156027601", "title": "Solaris", "author": "Stanis\u0142aw Lem", "amzn_url": "https://amzn.to/3OGKYvT", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/51yQl6pPpeL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 70, "fields": {"isbin1": "0262538474", "isbin2": "9780262538473", "title": "The Invincible", "author": "Stanis\u0142aw Lem", "amzn_url": "https://amzn.to/3brTD70", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/91m0cDdKoOL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 71, "fields": {"isbin1": "9780393308181", "isbin2": "9780393308181", "title": "Ever Since Darwin: Reflections in Natural History", "author": "Stephen Jay Gould", "amzn_url": "https://amzn.to/3neQ4nx", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/61vs5OArKoL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 72, "fields": {"isbin1": "0735619670", "isbin2": "9780735619678", "title": "Code Complete: A Practical Handbook of Software Construction", "author": "Steve McConnell", "amzn_url": "https://amzn.to/3xXlofg", "tb_url": "", "image": "https://m.media-amazon.com/images/P/0735619670.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 73, "fields": {"isbin1": "0143111388", "isbin2": "9780143111382", "title": "Enlightenment Now", "author": "Steven Pinker", "amzn_url": "https://amzn.to/39UiyzQ", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/91XCvcJ8mTL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 74, "fields": {"isbin1": "0393334775", "isbin2": "9780393334777", "title": "How the Mind Works", "author": "Steven Pinker", "amzn_url": "https://amzn.to/3yl9oWp", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/61CmYo8NgWL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 75, "fields": {"isbin1": "0143122010", "isbin2": "9780143122012", "title": "The Better Angels of Our Nature: Why Violence Has Declined", "author": "Steven Pinker", "amzn_url": "https://amzn.to/3yhQa3Y", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/81j7g4R1rtL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 76, "fields": {"isbin1": "0142003344", "isbin2": "9780142003343", "title": "The Blank Slate", "author": "Steven Pinker", "amzn_url": "https://amzn.to/3A6r1L2", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/81dYzCWYNpL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 77, "fields": {"isbin1": "9780061336461", "isbin2": "9780061336461", "title": "The Language Instinct: How the Mind Creates Language", "author": "Steven Pinker", "amzn_url": "https://amzn.to/3yms6gu", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/71YEAs0JM3L.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 78, "fields": {"isbin1": "9789332543515", "isbin2": "9789332543515", "title": "Artificial Intelligence: A Modern Approach", "author": "Stuart Russell", "amzn_url": "https://amzn.to/3A3b73M", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/81lVfGtNwnL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 79, "fields": {"isbin1": "0134610997", "isbin2": "9780134610993", "title": "Artificial Intelligence: A Modern Approach", "author": "Stuart Russell & Peter Norvig", "amzn_url": "https://amzn.to/3AeNJ3q", "tb_url": "", "image": "https://m.media-amazon.com/images/P/B092J75GML.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 80, "fields": {"isbin1": "0321934113", "isbin2": "9780321934116", "title": "Peopleware: Productive Projects and Teams", "author": "Tom DeMarco", "amzn_url": "https://amzn.to/3Nocm0B", "tb_url": "", "image": "https://m.media-amazon.com/images/I/51N7Zk67kNL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 81, "fields": {"isbin1": "1782276262", "isbin2": "9781782276265", "title": "Beyond Sleep", "author": "Willem Frederik Hermans", "amzn_url": "https://amzn.to/3yinuYE", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/81uGxRDFK3L.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 82, "fields": {"isbin1": "0141441720", "isbin2": "9780141441726", "title": "The Gathering Storm", "author": "Winston S. Churchill", "amzn_url": "https://amzn.to/3nigEMA", "tb_url": "", "image": "https://images-na.ssl-images-amazon.com/images/I/614mTkab-NL.jpg"}}, 
+    {
+        "model": "episodes.book", "pk": 83, "fields": {"isbin1": "9780062316097", "isbin2": "9780062316097", "title": "Sapiens: A Brief History of Humankind", "author": "Yuval Noah Harari", "amzn_url": "https://amzn.to/3OH2Zdl", "tb_url": "", "image": "https://m.media-amazon.com/images/P/0062316095.01._SCLZZZZZZZ_SX500_.jpg"}}, 
+    {
+        "model": "episodes.mentions", "pk": 1, "fields": {"ment_ep": 1, "ment_book": 1}}, 
+    {
+        "model": "episodes.mentions", "pk": 3, "fields": {"ment_ep": 1, "ment_book": 2}}, 
+    {
+        "model": "episodes.mentions", "pk": 4, "fields": {"ment_ep": 3, "ment_book": 3}}, 
+    {
+        "model": "episodes.mentions", "pk": 5, "fields": {"ment_ep": 3, "ment_book": 1}}, 
+    {
+        "model": "episodes.mentions", "pk": 7, "fields": {"ment_ep": 3, "ment_book": 4}}, 
+    {
+        "model": "episodes.mentions", "pk": 8, "fields": {"ment_ep": 4, "ment_book": 1}}, 
+    {
+        "model": "episodes.mentions", "pk": 9, "fields": {"ment_ep": 4, "ment_book": 2}}, 
+    {
+        "model": "episodes.mentions", "pk": 10, "fields": {"ment_ep": 5, "ment_book": 4}}, 
+    {
+        "model": "episodes.mentions", "pk": 11, "fields": {"ment_ep": 6, "ment_book": 2}}, 
+    {
+        "model": "episodes.mentions", "pk": 13, "fields": {"ment_ep": 7, "ment_book": 5}}, 
+    {
+        "model": "episodes.mentions", "pk": 14, "fields": {"ment_ep": 10, "ment_book": 3}}, 
+    {
+        "model": "episodes.mentions", "pk": 15, "fields": {"ment_ep": 7, "ment_book": 71}}, 
+    {
+        "model": "episodes.mentions", "pk": 16, "fields": {"ment_ep": 2, "ment_book": 7}}, 
+    {
+        "model": "episodes.mentions", "pk": 17, "fields": {"ment_ep": 17, "ment_book": 56}}, 
+    {
+        "model": "episodes.mentions", "pk": 18, "fields": {"ment_ep": 17, "ment_book": 70}}, 
+    {
+        "model": "episodes.mentions", "pk": 19, "fields": {"ment_ep": 8, "ment_book": 68}}, 
+    {
+        "model": "episodes.mentions", "pk": 20, "fields": {"ment_ep": 4, "ment_book": 48}}, 
+    {
+        "model": "episodes.mentions", "pk": 21, "fields": {"ment_ep": 16, "ment_book": 13}}, 
+    {
+        "model": "episodes.mentions", "pk": 22, "fields": {"ment_ep": 16, "ment_book": 43}}, 
+    {
+        "model": "episodes.mentions", "pk": 23, "fields": {"ment_ep": 16, "ment_book": 76}}, 
+    {
+        "model": "episodes.mentions", "pk": 24, "fields": {"ment_ep": 15, "ment_book": 3}}, 
+    {
+        "model": "episodes.mentions", "pk": 25, "fields": {"ment_ep": 16, "ment_book": 54}}, 
+    {
+        "model": "episodes.mentions", "pk": 26, "fields": {"ment_ep": 7, "ment_book": 55}}, 
+    {
+        "model": "episodes.mentions", "pk": 27, "fields": {"ment_ep": 14, "ment_book": 41}}, 
+    {
+        "model": "episodes.mentions", "pk": 28, "fields": {"ment_ep": 14, "ment_book": 54}}, 
+    {
+        "model": "episodes.mentions", "pk": 29, "fields": {"ment_ep": 14, "ment_book": 69}}, 
+    {
+        "model": "episodes.mentions", "pk": 30, "fields": {"ment_ep": 7, "ment_book": 30}}, 
+    {
+        "model": "episodes.mentions", "pk": 31, "fields": {"ment_ep": 2, "ment_book": 2}}, 
+    {
+        "model": "episodes.mentions", "pk": 32, "fields": {"ment_ep": 2, "ment_book": 7}}, 
+    {
+        "model": "episodes.mentions", "pk": 33, "fields": {"ment_ep": 5, "ment_book": 57}}, 
+    {
+        "model": "episodes.mentions", "pk": 34, "fields": {"ment_ep": 6, "ment_book": 46}}, 
+    {
+        "model": "episodes.mentions", "pk": 35, "fields": {"ment_ep": 6, "ment_book": 16}}, 
+    {
+        "model": "episodes.mentions", "pk": 36, "fields": {"ment_ep": 6, "ment_book": 56}}, 
+    {
+        "model": "episodes.mentions", "pk": 37, "fields": {"ment_ep": 13, "ment_book": 12}}, 
+    {
+        "model": "episodes.mentions", "pk": 38, "fields": {"ment_ep": 11, "ment_book": 56}}, 
+    {
+        "model": "episodes.mentions", "pk": 39, "fields": {"ment_ep": 11, "ment_book": 53}}, 
+    {
+        "model": "episodes.mentions", "pk": 40, "fields": {"ment_ep": 11, "ment_book": 64}}, 
+    {
+        "model": "episodes.mentions", "pk": 41, "fields": {"ment_ep": 11, "ment_book": 72}}, 
+    {
+        "model": "episodes.mentions", "pk": 42, "fields": {"ment_ep": 9, "ment_book": 5}}, 
+    {
+        "model": "episodes.mentions", "pk": 43, "fields": {"ment_ep": 9, "ment_book": 11}}, 
+    {
+        "model": "episodes.mentions", "pk": 44, "fields": {"ment_ep": 9, "ment_book": 52}}, 
+    {
+        "model": "episodes.mentions", "pk": 45, "fields": {"ment_ep": 12, "ment_book": 52}}, 
+    {
+        "model": "episodes.mentions", "pk": 46, "fields": {"ment_ep": 12, "ment_book": 58}}, 
+    {
+        "model": "episodes.mentions", "pk": 47, "fields": {"ment_ep": 12, "ment_book": 72}}, 
+    {
+        "model": "episodes.mentions", "pk": 48, "fields": {"ment_ep": 12, "ment_book": 72}}, 
+    {
+        "model": "episodes.ephemera", "pk": 1, "fields": {"eph_ep": 1, "film": "Her", "paper": "", "podcast": "", "music": "", "video": "", "games": "", "art": "", "link": "https://en.wikipedia.org/wiki/Her_(film)"}}, 
+    {
+        "model": "episodes.ephemera", "pk": 2, "fields": {"eph_ep": 1, "film": "", "paper": "", "podcast": "JRE", "music": "", "video": "", "games": "", "art": "", "link": "https://www.jre.com"}}, 
+    {
+        "model": "episodes.ephemera", "pk": 3, "fields": {"eph_ep": 1, "film": "Another Film", "paper": "", "podcast": "", "music": "", "video": "", "games": "", "art": "", "link": "www.google.com"}}, 
+    {
+        "model": "episodes.ephemera", "pk": 4, "fields": {"eph_ep": 1, "film": "", "paper": "", "podcast": "", "music": "Another", "video": "", "games": "", "art": "", "link": "google.com"}}, 
+    {
+        "model": "episodes.ephemera", "pk": 5, "fields": {"eph_ep": 1, "film": "", "paper": "another one", "podcast": "", "music": "", "video": "", "games": "", "art": "", "link": "link here"}}, 
+    {
+        "model": "episodes.ephemera", "pk": 6, "fields": {"eph_ep": 1, "film": "", "paper": "", "podcast": "", "music": "", "video": "", "games": "", "art": "Mona Lisa", "link": "www.monalisa.com"}}, 
+    {
+        "model": "episodes.ephemera", "pk": 7, "fields": {"eph_ep": 2, "film": "Green Mile", "paper": "", "podcast": "", "music": "", "video": "", "games": "", "art": "", "link": "https://www.youtube.com/greenmile"}}
+]
