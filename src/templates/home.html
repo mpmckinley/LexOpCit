@@ -23,13 +23,11 @@
                             {{ episodes.number }} | {{ episodes.date }}
                         </a>
                     </h6>
-                    <p class="card-text">{{ episodes.title }}</p>
-                        {% for mentions in mentions %}
-                            {% if episodes.id == mentions.ment_ep_id %}
-                                <a href="{{ mentions.ment_book.amzn_url }}" target="_blank">
-                                    <img src={{ mentions.ment_book.image }} class="book-thumb" title="{{ mentions.ment_book.title }}" alt="{{ mentions.ment_book.title }}">
-                                </a>
-                            {% endif %}
+                    <p class="card-text">{{ episodes.title }}<br>
+                        {% for mentions in episodes.mentions_set.all %}
+                            <a href="{{ mentions.ment_book.amzn_url }}" target="_blank">
+                                <img src="{{ mentions.ment_book.image }}" style="height:50px;" class="book-thumb" title="{{ mentions.ment_book.title }}" alt="{{ mentions.ment_book.title }}">
+                            </a>
                         {% endfor %}
                     </p>
                 </div>
