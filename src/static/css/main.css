@@ -1,5 +1,5 @@
 .container {
-    margin-top: 2%;
+    margin-top: 1%;
     width: 100%;
 }
 
@@ -31,6 +31,10 @@ table {
 td.library-td {
     width: 5%;
 }
+
+/* td.library-mention {
+    display: inline-block;
+} */
 
 th.eph-lead {
     width: 16%;
