@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
+{% load django_tables2 i18n %}
 
 {% block content %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <div class="px-5 py-1 mb-2 bg-light rounded-3">
         <div class="container-fluid py-5">
             <h1 class="display-6">Library</h1>
             <p class="col-md-8 fs-6">A book-centric view of all book references from the Lex Fridman Podcast. Default sorting by epsiode mention count, associated podcasts shown as well.</p>
         </div>
     </div>
+<<<<<<< HEAD
 
     <p align="center">
         Most Popular    |   Recent      |       Esoteric
@@ -48,6 +51,17 @@
             </tbody>
         </table>
     </div>
+=======
+        
+        {% if filter %}
+        <form action="" method="get" class="form form-inline">
+            {{ filter.form.as_table }}
+            <button class="btn btn-primary">Filter</button>
+        </form>
+        {% endif %}
+        
+        {% render_table object_list %}
+>>>>>>> 038d357d674769be759374280bfc14d8af121181
 
 {% endblock content %}
 
