@@ -22,8 +22,9 @@ Table.paginate = custom_paginate
 class BookTable(Table):
     class Meta:
         model = Book
-        template_name = "django_tables2/bootstrap-responsive.html"
-        fields = ('isbin1', 'isbin2', 'title', 'author', 'amzn_url', 'tb_url')
+        template_name = "django_tables2/bootstrap.html"
+        fields = ('title', )
+
 
 
 
