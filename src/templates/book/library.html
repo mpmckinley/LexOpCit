@@ -2,56 +2,13 @@
 {% load django_tables2 i18n %}
 
 {% block content %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    {% comment %} <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> {% endcomment %}
     <div class="px-5 py-1 mb-2 bg-light rounded-3">
         <div class="container-fluid py-5">
             <h1 class="display-6">Library</h1>
             <p class="col-md-8 fs-6">A book-centric view of all book references from the Lex Fridman Podcast. Default sorting by epsiode mention count, associated podcasts shown as well.</p>
         </div>
     </div>
-<<<<<<< HEAD
-
-    <p align="center">
-        Most Popular    |   Recent      |       Esoteric
-    </p>
-
-    <div class="table-responsive">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th style="width: 30%">Title</th>
-                    <th>Mentions</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for books in books %}
-                <tr>
-                    <td class="library-td">
-                        <a href="{{ books.amzn_url }}" target="_blank">
-                            <img src="{{ books.image }}" class="book-library-thumb" alt="{{ books.title }}">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="{{ books.amzn_url }}" target="_blank">
-                            {{ books.title }}<br>
-                        </a>
-                            {{ books.author }}
-                    </td>
-                    <td class="library-mention">
-                        {% for mentions in mentions %}
-                            {% if mentions.ment_book_id == books.id %}
-                                <a href="{{ mentions.ment_ep.yt_url }}">{{ mentions.ment_ep.number }} | {{ mentions.ment_ep.guest1 }}</a>
-                                <br>
-                            {% endif %}
-                        {% endfor %}
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-=======
         
         {% if filter %}
         <form action="" method="get" class="form form-inline">
@@ -61,7 +18,6 @@
         {% endif %}
         
         {% render_table object_list %}
->>>>>>> 038d357d674769be759374280bfc14d8af121181
 
 {% endblock content %}
 

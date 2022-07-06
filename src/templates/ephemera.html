@@ -24,7 +24,6 @@
         </thead>
         <tbody>
             {% regroup ephemera by eph_ep as ep_list %}
-                EP_LIST: {{ ep_list }}
                 {% for eph_ep in ep_list %}
                 {% comment %} See return of NULL values in below FOR statements {% endcomment %}
                     <tr>
@@ -48,7 +47,14 @@
                                 {% endif %}
                             {% endfor %}
                         </td>
-                        <td></td>
+                        <td>
+                            {% for music in eph_ep.list %}
+                                {% if music.music %}
+                                    <a href="{{ music.link }}">{{ music.music }}</a>
+                                    <br>
+                                {% endif %}
+                            {% endfor %}
+                        </td>
                         <td></td>
                         <td></td>
                         <td></td>
