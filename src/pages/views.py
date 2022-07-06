@@ -14,7 +14,6 @@ def home_view(request):
     # print(mention_queryset.query)
     return render(request, 'home.html', context)
 
-
 def search_view(request):
     phrase =  request.GET.get('q')
     title_qs = Episode.objects.prefetch_related('mentions_set').filter(

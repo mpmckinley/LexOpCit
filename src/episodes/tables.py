@@ -27,6 +27,7 @@ class BookTable(Table):
 
 
 
+
 class EphemeraTable(Table):
     class Meta:
         model = Ephemera
@@ -37,5 +38,5 @@ class EphemeraTable(Table):
 class EpisodeTable(Table):
     class Meta:
         model = Episode
-        template_name = "django_tables2/bootstrap.html"
+        template_name = "django_tables2/bootstrap4.html"
         fields = ['title']
