@@ -7,7 +7,7 @@ img.book-thumb {
     border-radius: 3px;
     width: 30%;
     vertical-align: middle;
-    margin-top: 2px;
+    margin-top: 4px;
     align-items: center;
 }
 
@@ -32,6 +32,10 @@ td.library-td {
     width: 5%;
 }
 
+td.library-mention-td {
+    width: 55%;
+}
+
 /* td.library-mention {
     display: inline-block;
 } */
@@ -52,6 +56,10 @@ tr.eph_body {
 table.ephemera {
     text-align: center; 
     vertical-align: middle;
+}
+
+.fa-solid {
+    color: rgb(60, 60, 60);
 }
 
 a[href ^= 'https://amzn.to/'] {

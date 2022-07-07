@@ -7,7 +7,7 @@
      {% comment %} data-masonry='{"percentPosition": true }' {% endcomment %}
         {% for episodes in episodes %}
         <div class="col mb-2">
-            <div class="card text-bg-light mb-3" style="max-width: 20rem;">
+            <div class="card text-bg-light mb-2" style="max-width: 20rem;">
                 <div class="card-body">
                     <h5 class="card-title">{{ episodes.guest1 }}
                         {% if episodes.guest2 is not null %}
@@ -18,7 +18,7 @@
                                             <br> {{ episodes.guest4 }}
                         {% endif %}
                     </h5>
-                    <h6 class="card-subtitle mb-2 text-muted">
+                    <h6 class="card-subtitle mb-1 text-muted">
                         <a href="{{ episodes.yt_url }}" target="_blank">
                             {{ episodes.number }} | {{ episodes.date }}
                         </a>

@@ -69,7 +69,7 @@
                             {{ row.record.author }}
                         </td>
                         {% endwith %}
-                        <td>
+                        <td class="library-mention-td">
                             {% for mentions in row.record.mentions_set.all %}
                                 <a href="{{ mentions.ment_ep.yt_url }}">{{ mentions.ment_ep.number }} | {{ mentions.ment_ep.guest1 }}</a>
                                 <br/>

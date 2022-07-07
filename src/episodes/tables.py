@@ -25,15 +25,11 @@ class BookTable(Table):
         template_name = "django_tables2/bootstrap4.html"
         fields = ('title', )
 
-
-
-
 class EphemeraTable(Table):
     class Meta:
         model = Ephemera
         template_name = "django_tables2/bootstrap4.html"
         fields = ['film', 'paper', 'podcast', 'music', 'video', 'games', 'art', 'link']
-
 
 class EpisodeTable(Table):
     class Meta:
