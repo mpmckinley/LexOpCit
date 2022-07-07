@@ -10,7 +10,7 @@ def custom_paginate(self, paginator_class=Paginator, per_page=None, page=1, *arg
     Paginates the table using a paginator and creates a ``page`` property
     containing information for the current page.
     """
-    per_page = 12
+    per_page = 15
     self.paginator = paginator_class(self.rows, per_page, *args, **kwargs)
     self.page = self.paginator.page(page)
 
@@ -22,7 +22,7 @@ Table.paginate = custom_paginate
 class BookTable(Table):
     class Meta:
         model = Book
-        template_name = "django_tables2/bootstrap.html"
+        template_name = "django_tables2/bootstrap4.html"
         fields = ('title', )
 
 
@@ -31,7 +31,7 @@ class BookTable(Table):
 class EphemeraTable(Table):
     class Meta:
         model = Ephemera
-        template_name = "django_tables2/bootstrap.html"
+        template_name = "django_tables2/bootstrap4.html"
         fields = ['film', 'paper', 'podcast', 'music', 'video', 'games', 'art', 'link']
 
 
