@@ -51,56 +51,91 @@
                 {% block table.tbody.row %}
                 <tr {{ row.attrs.as_html }}>
                     {% with row.cells.title as column %}
-                    <td {{ row.cells.title.attrs.td.as_html }}>{% if column.localize == None %}{{ row.cells.title }}{% else %}
-                        {% if column.localize %}{{ row.cells.title|localize }}{% else %}{{ row.cells.title|unlocalize }}{% endif %}{% endif %}</td>
-                        
+                        <td {{ row.cells.title.attrs.td.as_html }}>{% if column.localize == None %}{{ row.cells.title }}{% else %}
+                            {% if column.localize %}{{ row.cells.title|localize }}{% else %}{{ row.cells.title|unlocalize }}{% endif %}{% endif %}
+                        </td>
                     {% endwith %}
                     <td>
                         {% for film in row.record.ephemera_set.all %}
                             {% if film.film %}
-                                <a href="{{ film.link }}"><i class="fa-solid fa-film" title="{{ film.film }}"></i></a>
+                            <a href="{{ film.link }}">
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-1" title="{{ film.film }}">
+                                    <i class="fa-solid fa-film" title="{{ film.film }}"></i>
+                                    {{ film.film|truncatechars:10 }}
+                                </button>
+                            </a>
                             {% endif %}
                         {% endfor %}
                     </td>
                     <td>
                         {% for paper in row.record.ephemera_set.all %}
                             {% if paper.paper %}
-                                <a href="{{ paper.link }}"><i class="fa-solid fa-file-pen" title="{{ paper.paper }}"></i></a>
+                            <a href="{{ paper.link }}">
+                                <button type="button" class="btn btn-outline-dark btn-sm mt-1" title="{{ paper.paper }}">
+                                    <i class="fa-solid fa-file-pen" id="fa_paper" title="{{ paper.paper }}"></i>
+                                    {{ paper.paper|truncatechars:10 }}
+                                </button>
+                            </a>
                             {% endif %}
                         {% endfor %}
                     </td>
                     <td>
                         {% for podcast in row.record.ephemera_set.all %}
                             {% if podcast.podcast %}
-                                <a href="{{ podcast.link }}"><i class="fa-solid fa-podcast" title="{{ podcast.podcast }}"></i></a>
+                            <a href="{{ podcast.link }}">
+                                <button type="button" class="btn btn-outline-info btn-sm mt-1" title="{{ paper.paper }}">
+                                    <i class="fa-solid fa-podcast" id="fa_podcast" title="{{ podcast.podcast }}"></i>
+                                    {{ podcast.podcast|truncatechars:10 }}
+                                </button>
+                            </a>
                             {% endif %}
                         {% endfor %}
                     </td>
                     <td>
                         {% for music in row.record.ephemera_set.all %}
                             {% if music.music %}
-                                <a href="{{ music.link }}"><i class="fa-solid fa-music" title="{{ music.music }}"></i></a>
+                            <a href="{{ music.link }}">
+                                <button type="button" class="btn btn-outline-warning btn-sm mt-1" title="{{ music.music }}">
+                                    <i class="fa-solid fa-music" title="{{ music.music }}"></i>
+                                    {{ music.music|truncatechars:10 }}
+                                </button>
+                            </a>
                             {% endif %}
                         {% endfor %}
                     </td>
                     <td>
                         {% for video in row.record.ephemera_set.all %}
                             {% if video.video %}
-                                <a href="{{ video.link }}"><i class="fa-solid fa-tv" title="{{ video.video }}"></i></a>
+                            <a href="{{ video.link }}">
+                                <button type="button" class="btn btn-outline-danger btn-sm mt-1" title="{{ video.video }}">
+                                    <i class="fa-solid fa-tv" title="{{ video.video }}"></i>
+                                    {{ video.video|truncatechars:10 }}
+                                </button>
+                            </a>
                             {% endif %}
                         {% endfor %}
                     </td>
                     <td>
                         {% for games in row.record.ephemera_set.all %}
                             {% if games.games %}
-                                <a href="{{ games.link }}"><i class="fa-solid fa-gamepad" title="{{ games.games }}"></i></a>
+                            <a href="{{ games.link }}">
+                                <button type="button" class="btn btn-outline-secondary btn-sm mt-1" title="{{ games.games }}">
+                                    <i class="fa-solid fa-gamepad" title="{{ games.games }}"></i>
+                                    {{ games.games|truncatechars:10 }}
+                                </button>
+                            </a>
                             {% endif %}
                         {% endfor %}
                     </td>
                     <td>
                         {% for art in row.record.ephemera_set.all %}
                             {% if art.art %}
-                                <a href="{{ art.link }}"><i class="fa-solid fa-palette" title="{{ art.art }}"></i></a>
+                            <a href="{{ art.link }}">
+                                <button type="button" class="btn btn-outline-success btn-sm mt-1" title="{{ art.art }}">
+                                    <i class="fa-solid fa-palette" title="{{ art.art }}"></i>
+                                    {{ art.art|truncatechars:10 }}
+                                </button>
+                            </a>
                             {% endif %}
                         {% endfor %}
                     </td>
