@@ -10,9 +10,16 @@
     </div>
     
     {% if filter %}
-    <form action="" method="get" class="form form-inline">
-        {{ filter.form.as_table }}
-        <button class="btn btn-primary">Filter</button>
+    <form action="" method="get" class="form form-inline row g-3 align-items-center py-1">
+        <div class="col-auto">
+            Title contains:
+        </div>
+        <div class="col-auto">
+            {{ filter.form.title }}
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-primary">Filter</button>
+        </div>
     </form>
     {% endif %}
     {% block table-wrapper %}
@@ -51,10 +58,34 @@
                 {% block table.tbody.row %}
                 <tr {{ row.attrs.as_html }}>
                     {% with row.cells.title as column %}
-                        <td {{ row.cells.title.attrs.td.as_html }}>{% if column.localize == None %}{{ row.cells.title }}{% else %}
-                            {% if column.localize %}{{ row.cells.title|localize }}{% else %}{{ row.cells.title|unlocalize }}{% endif %}{% endif %}
-                        </td>
+                    <td {{ row.cells.title.attrs.td.as_html }}>
+                    
+                        <div style="text-align: left;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ row.cells.guest1 }}
+                                    {% if row.cells.guest2 is not null %}
+                                        , {{ row.cells.guest2 }},
+                                            {% elif row.cells.guest3 is not null %}
+                                                 {{ row.cells.guest3 }},
+                                                    {% elif row.cells.guest4 is not null %}
+                                                         {{ row.cells.guest4 }}
+                                    {% endif %}
+                                </h5>
+                                <h6 class="card-subtitle mb-1 text-muted">
+                                    <a href="{{row.cells.yt_url}}" target="_blank">
+                                        {{row.cells.number}} | {{row.cells.date}}
+                                    </a>
+                                </h6>
+                                <p class="card-text">
+                                    {{row.cells.title}}
+                                </p>
+                            </div>
+                        </div>
+                    
+                    </td>
+                        
                     {% endwith %}
+                     
                     <td>
                         {% for film in row.record.ephemera_set.all %}
                             {% if film.film %}
