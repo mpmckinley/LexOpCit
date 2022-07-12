@@ -11,9 +11,22 @@
     </div>
         
     {% if filter %}
-    <form action="" method="get" class="form form-inline">
-        {{ filter.form.as_table }}
-        <button class="btn btn-primary">Filter</button>
+    <form action="" method="get" class="form form-inline row g-3 align-items-center py-1">
+        <div class="col-auto">
+            Title contains:
+        </div>
+        <div class="col-auto">
+            {{ filter.form.title }}
+        </div>
+        <div class="col-auto">
+            Author contains:
+        </div>
+        <div class="col-auto">
+            {{ filter.form.author }}
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-primary">Filter</button>
+        </div>
     </form>
     {% endif %}
         
@@ -70,10 +83,11 @@
                         </td>
                         {% endwith %}
                         <td class="library-mention-td">
-                            {% for mentions in row.record.mentions_set.all %}
-                                <a href="{{ mentions.ment_ep.yt_url }}">{{ mentions.ment_ep.number }} | {{ mentions.ment_ep.guest1 }}</a>
-                                <br/>
-                            {% endfor %}
+                            <div class="library-mentions">
+                                {% for mentions in row.record.mentions_set.all %}
+                                    <a href="{{ mentions.ment_ep.yt_url }}">{{ mentions.ment_ep.number }} | {{ mentions.ment_ep.guest1 }}</a>
+                                {% endfor %}
+                            </div>
                         </td>
                     </tr>
                     {% endblock table.tbody.row %}

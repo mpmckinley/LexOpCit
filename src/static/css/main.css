@@ -65,3 +65,13 @@ a[href ^= 'https://amzn.to/'] {
 a.no-line {
     text-decoration: none;
 }
+.library-mentions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.library-mentions a
+{
+    margin: 0.3em 0.5em;
+    margin-top: 0;
+}

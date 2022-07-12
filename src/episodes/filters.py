@@ -10,7 +10,10 @@ class BookFilter(django_filters.FilterSet):
     class Meta:
         model = Book
         fields = ['title', 'author']
-
+    def __init__(self, data=None, queryset=None, *, request=None, prefix=None):
+            super(BookFilter, self).__init__(data=data, queryset=queryset, request=request, prefix=prefix)
+            self.filters['title'].field.widget.attrs.update({'class': 'form-control', 'placeholder': 'Text Only'})
+            self.filters['author'].field.widget.attrs.update({'class': 'form-control', 'placeholder': 'Text Only'})
 
 
 class EphemeraFilter(django_filters.FilterSet):
@@ -24,3 +27,7 @@ class EpisodeFilter(django_filters.FilterSet):
     class Meta:
         model = Episode
         fields = ['title']
+    def __init__(self, data=None, queryset=None, *, request=None, prefix=None):
+                super(EpisodeFilter, self).__init__(data=data, queryset=queryset, request=request, prefix=prefix)
+                self.filters['title'].field.widget.attrs.update({'class': 'form-control', 'placeholder': 'Text Only'})
+
