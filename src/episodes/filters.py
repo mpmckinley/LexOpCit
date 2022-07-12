@@ -12,8 +12,8 @@ class BookFilter(django_filters.FilterSet):
         fields = ['title', 'author']
     def __init__(self, data=None, queryset=None, *, request=None, prefix=None):
             super(BookFilter, self).__init__(data=data, queryset=queryset, request=request, prefix=prefix)
-            self.filters['title'].field.widget.attrs.update({'class': 'form-control', 'placeholder': 'Text Only'})
-            self.filters['author'].field.widget.attrs.update({'class': 'form-control', 'placeholder': 'Text Only'})
+            self.filters['title'].field.widget.attrs.update({'class': 'form-control', 'placeholder': 'Title'})
+            self.filters['author'].field.widget.attrs.update({'class': 'form-control', 'placeholder': 'Author'})
 
 
 class EphemeraFilter(django_filters.FilterSet):

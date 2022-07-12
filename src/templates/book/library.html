@@ -6,21 +6,21 @@
     <div class="px-5 py-1 mb-2 bg-light rounded-3">
         <div class="container-fluid py-5">
             <h1 class="display-6">Library</h1>
-            <p class="col-md-8 fs-6">The collected book references from the Lex Fridman Podcast. Default sorting by epsiode mention count, associated podcasts shown as well.</p>
+            <p class="col-md-8 fs-6">The collected book references from the Lex Fridman Podcast.</p>
         </div>
     </div>
         
     {% if filter %}
     <form action="" method="get" class="form form-inline row g-3 align-items-center py-1">
-        <div class="col-auto">
+        {% comment %} <div class="col-auto">
             Title contains:
-        </div>
+        </div> {% endcomment %}
         <div class="col-auto">
             {{ filter.form.title }}
         </div>
-        <div class="col-auto">
+        {% comment %} <div class="col-auto">
             Author contains:
-        </div>
+        </div> {% endcomment %}
         <div class="col-auto">
             {{ filter.form.author }}
         </div>
