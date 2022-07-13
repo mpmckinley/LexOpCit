@@ -38,7 +38,7 @@
                 {% if table.show_header %}
                 <thead {{ table.attrs.thead.as_html }}>
                     <tr>
-                        <th style="width: 5%"></th>
+                        <th></th>
                         {% with table.columns.title as column %}
                         <th {{ column.attrs.th.as_html }}>
                             {% if column.orderable %}
