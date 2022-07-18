@@ -29,8 +29,8 @@ urlpatterns = [
     path('episodes/', episode_library, name='episodes'),
     path('episodes/<int:pk>/', episode_detail, name='episode_detail'),
 
-    path('ephemera/', ephemera_view, name='ephemera'),
-    path('ephemera_filter/', FilteredEphemeraListView.as_view(), name='ephemera-filter'),
+    # path('ephemera/', ephemera_view, name='ephemera'),
+    path('ephemera/', FilteredEphemeraListView.as_view(), name='ephemera'),
 
     path('about/', about_view, name='about'),
     path('admin/', admin.site.urls),

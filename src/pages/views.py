@@ -1,11 +1,18 @@
 from itertools import groupby
 from multiprocessing import context
+from unittest import result
 from django.http import HttpResponse
 from django.shortcuts import render
 from episodes.models import Episode, Mentions, Ephemera
 
 # Create your views here.
 def home_view(request):
+    # page = int(request.GET.get('page'))
+    # if not page:
+    #     page = 1
+    # end = 10 
+    # start = int((page - 1) * end)
+    # end *= page
     episode_queryset = Episode.objects.prefetch_related('mentions_set').all().order_by('-date')
     context = {
         'episodes': episode_queryset,

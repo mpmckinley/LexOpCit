@@ -12,17 +12,11 @@
         
     {% if filter %}
     <form action="" method="get" class="form form-inline row g-3 align-items-center py-1">
-        {% comment %} <div class="col-auto">
+      <div class="col-auto">
             Title contains:
-        </div> {% endcomment %}
+        </div> 
         <div class="col-auto">
-            {{ filter.form.title }}
-        </div>
-        {% comment %} <div class="col-auto">
-            Author contains:
-        </div> {% endcomment %}
-        <div class="col-auto">
-            {{ filter.form.author }}
+            {{ filter.form.title_author }} 
         </div>
         <div class="col-auto">
             <button class="btn btn-primary">Filter</button>
@@ -38,7 +32,7 @@
                 {% if table.show_header %}
                 <thead {{ table.attrs.thead.as_html }}>
                     <tr>
-                        <th></th>
+                        <th style="width: 5%"></th>
                         {% with table.columns.title as column %}
                         <th {{ column.attrs.th.as_html }}>
                             {% if column.orderable %}
