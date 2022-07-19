@@ -1,7 +1,7 @@
 # LexOpCit
-Compilation of book mentions during the Lex Fridman Podcast.
+Compilation of book mentions during the Lex Fridman Podcast and other non-book interests.
 
-LexOpCit.com
+<a href="www.lexopcit.com">www.lexopcit.com</a>
 
 ## lexbooks = project
 ## pages = home/about
