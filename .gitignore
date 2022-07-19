@@ -2,11 +2,10 @@ wip/
 env/
 .env
 __pycache__/
-migrations/
 venv
-episodes/__pycache__
-episodes/migrations/__pycache__
+episodes/__pycache__/
+episodes/migrations/
 lexbooks/__pycache__
 pages/__pycache__
-/episodes/migrations
+episodes/migrations/
 pages/migrations
