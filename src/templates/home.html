@@ -3,20 +3,25 @@
 {% block content %}
 
 {% comment %} <div class="container"> {% endcomment %}
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 grid" data-masonry='{"percentPosition": true }'>
+    <div id="content_wrapper" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 grid" page="{{page_number}}" data-masonry='{"percentPosition": true }'>
      {% comment %} data-masonry='{"percentPosition": true }' {% endcomment %}
         {% for episodes in episodes %}
         <div class="col mb-2">
             <div class="card text-bg-light mb-2" style="max-width: 20rem;">
                 <div class="card-body">
-                    <h5 class="card-title">{{ episodes.guest1 }}
-                        {% if episodes.guest2 is not null %}
-                            <br> {{ episodes.guest2 }}
-                                {% elif episodes.guest3 is not null %}
-                                    <br> {{ episodes.guest3 }}
-                                        {% elif episodes.guest4 is not null %}
-                                            <br> {{ episodes.guest4 }}
+                    <h5 class="card-title">{{ episodes.guest1 }}<br>
+                        {% if episodes.guest2 %}
+                            {{ episodes.guest2 }}<br> 
                         {% endif %}
+
+                        {% if episodes.guest3 %}
+                            {{ episodes.guest3 }}<br> 
+                            {% endif %}
+
+                        {% if episodes.guest4 %}
+                            {{ episodes.guest4 }}<br> 
+                        {% endif %}
+
                     </h5>
                     <h6 class="card-subtitle mb-1 text-muted">
                         <a href="{{ episodes.yt_url }}" target="_blank">
@@ -46,27 +51,78 @@
         });
 
         $(window).scroll(function() {
-            if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-                getresult();
+            // console.log(Math.ceil($(window).scrollTop()));
+            // console.log($(document).height());
+            // console.log($(window).height());
+            // console.log($(document).height() - $(window).height());
+            if (Math.ceil($(window).scrollTop()) >= $(document).height() - $(window).height()) 
+            {
+                var page = $("#content_wrapper").attr('page');
+                page++;
+                $.ajax({
+                url: "{% url 'fetch-page' %}",
+                data: {
+                    'page':page
+                },
+                type: "GET",
+                success: function(data) {
+                    $("#content_wrapper").attr('page',page);
+                    var items_data = data.context.episodes;
+                    console.log(data);
+                    var new_items = "";
+                    for (var i = 0; i < items_data.length; i++) {
+                        var item = items_data[i];
+                        var item_html = '<div class="col mb-2">';
+                        item_html += '<div class="card text-bg-light mb-2" style="max-width: 20rem;">';
+                        item_html += '<div class="card-body">';
+                        item_html += '<h5 class="card-title">' + item.guest1;
+                        if(item.guest2)
+                        {
+                            item_html += '<br>' + item.guest2 + '<br>';
+                        }
+                        if(item.guest3)
+                        {
+                            item_html += item.guest3 + '<br>';
+                        }
+                        if(item.guest2)
+                        {
+                            item_html += item.guest4;
+                        }
+                        item_html += '</h5>';
+                        item_html += '<h6 class="card-subtitle mb-1 text-muted">';
+                        item_html += '<a href="' + item.yt_url + '" target="_blank">' + item.number + ' | ' + item.date + '</a>';
+                        item_html += '</h6>';
+                        item_html += '<p class="card-text">' + item.title + '<br>';
+                        if(item.mentions_set)
+                        {
+                            item_html += '<img src="' + item.mentions_set.all + '" class="book-thumb" title="' + item.mentions_set.all + '" alt="' + item.mentions_set.all + '">';
+                        }
+                        item_html += '</p>';
+                        item_html += '</div>';
+                        item_html += '</div>';
+                        item_html += '</div>';
+                        new_items += item_html;
+                    }
+                    if(new_items != "")
+                    {
+                        $(".grid").append(new_items);
+                        $(".grid").masonry('reloadItems');
+                        $(".grid").masonry('layout');
+                        $(".grid").imagesLoaded().progress(function() {
+                            $(".grid").masonry('layout');
+                        });
+                    }
+                },
+                error: function() {
+                    console.log("Error");
+                 }
+            });
+            }
+            else
+            {
+                console.log('Here')
             }
         });
-        function getresult()
-        {
-            console.log("getresult");
-            // var url = "";
-            // $.ajax({
-            //     url: url,
-            //     type: "GET",
-            //     success: function(data) {
-            //         $(".grid").append(data);
-            //         $(".grid").masonry('reloadItems');
-            //         $(".grid").masonry('layout');
-            //     },
-            //     error: function() {
-            //         console.log("Error");
-            //      }
-            // });
-        }
     </script>
 
     {% endblock content %}

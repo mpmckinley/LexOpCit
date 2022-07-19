@@ -71,7 +71,7 @@ class FilteredEphemeraListView(SingleTableMixin, FilterView):
     model = Episode
     # Since we are particular about ephemera and only getting it through episodes,
     # we filter through episodes that have ephemera 
-    queryset = Episode.objects.annotate(eph_count=Count('ephemera')).filter(eph_count__gt=0)
+    queryset = Episode.objects.annotate(eph_count=Count('ephemera')).filter(eph_count__gt=0).order_by('-date')  
     template_name = "ephemera_filter.html"
     filterset_class = EpisodeFilter
 
