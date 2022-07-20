@@ -76,7 +76,13 @@
                                 </h5>
                                 <h6 class="card-subtitle mb-1 text-muted">
                                     <a href="{{row.cells.yt_url}}" target="_blank">
-                                        {{row.cells.number}} | {{row.cells.date}}
+                                        {{row.cells.number}} |   
+                                            {% for eph in row.record.ephemera_set.all %}
+                                                {% if eph.eph_ep %}
+                                                   {{ eph.eph_ep.date }}
+                                                {% endif %}
+                                                {{break }}
+                                            {% endfor %} 
                                     </a>
                                 </h6>
                                 <p class="card-text">

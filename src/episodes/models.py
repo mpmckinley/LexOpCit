@@ -15,7 +15,8 @@ class Episode(models.Model):
     tags        = models.TextField()
 
     def __str__(self):
-        return f"{self.number}|{self.date} : {self.guest1} - {self.title}"
+        return f"{self.number}|{self.date.strftime(' %b %d %Y')} : {self.guest1} - {self.title}"
+
 
 class Book(models.Model):
     isbin1      = models.CharField(max_length=13)
