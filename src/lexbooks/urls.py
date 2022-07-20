@@ -16,13 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from pages.views import home_view, home_view2,about_view, search_view
+from pages.views import home_view,about_view, search_view
 from episodes.views import (episode_library, episode_detail, book_detail, 
     ephemera_view, FilteredEphemeraListView, FilteredBooksListView)
 
 urlpatterns = [
     path('', home_view, name='home'),
-    path('fetch-page/', home_view2, name='fetch-page'),
     path('episode_search', search_view, name="episode-search"),
     path('library/', FilteredBooksListView.as_view(), name='books'),
     path('library/<int:pk>/', book_detail, name='book_detail'),
