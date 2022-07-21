@@ -14,6 +14,7 @@ def home_view(request):
     end = 20
     start = int((page - 1) * end)
     end *= page
+    print(start,end,'********************')
     episode_queryset = Episode.objects.prefetch_related('mentions_set').all().order_by('-date')[start:end]
     context = {
         'episodes': episode_queryset,

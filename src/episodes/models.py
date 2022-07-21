@@ -17,7 +17,6 @@ class Episode(models.Model):
     def __str__(self):
         return f"{self.number}|{self.date.strftime(' %b %d %Y')} : {self.guest1} - {self.title}"
 
-
 class Book(models.Model):
     isbin1      = models.CharField(max_length=13)
     isbin2      = models.CharField(max_length=13)
