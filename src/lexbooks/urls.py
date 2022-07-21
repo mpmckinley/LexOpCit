@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from pages.views import home_view,about_view, search_view
+from pages.views import home_view, about_view, search_view
 from episodes.views import (episode_library, episode_detail, book_detail, 
     ephemera_view, FilteredEphemeraListView, FilteredBooksListView)
 

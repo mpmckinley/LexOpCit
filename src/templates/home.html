@@ -53,8 +53,17 @@
         $(document.body).on('touchmove', onScroll); // for mobile
         $(window).on('scroll', onScroll); 
 
-        function onScroll(){ 
-            if (Math.ceil($(window).scrollTop())+200 >= $(document).height() - $(window).height()) {
+        var scrolltrigger = 0;
+
+        function onScroll(){
+
+            var mywindowt = $(window).scrollTop();
+            if($(window).width() <= 600) {
+                mywindowt = mywindowt+100;
+            }
+
+            if (Math.ceil(mywindowt) >= $(document).height() - $(window).height() && scrolltrigger == 0) {
+                scrolltrigger = 1;
                 var page = $("#content_wrapper").attr('page');
                 page++;
                 $.ajax({
@@ -66,7 +75,7 @@
                 type: "GET",
                 success: function(data) {
                         var data1 = jQuery(data).filter("#content_wrapper").html();
-            			if (typeof (data1) == "undefined") { data1 = jQuery("#content_wrapper > *", data); }
+                        if (typeof (data1) == "undefined") { data1 = jQuery("#content_wrapper > *", data); }
                         if(data1.length>0){
                             $("#content_wrapper").append(data1);
                             $("#content_wrapper").attr('page',page);
@@ -78,12 +87,16 @@
                                     $(".grid").masonry('layout');
                                 });
                             }
+                            setTimeout(function(){
+                                scrolltrigger = 0;
+                            },2000);
                         }
                     // }
                 },
                 error: function() {
+                    scrolltrigger = 0;
                     console.log("Error");
-                 }
+                }
             });
             }
             else
@@ -91,6 +104,6 @@
                 console.log('Here')
             }
         };
-    </script>
+        </script>
 
-    {% endblock content %}
+        {% endblock content %}
