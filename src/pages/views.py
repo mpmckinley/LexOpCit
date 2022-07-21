@@ -39,7 +39,7 @@ def search_view(request):
 
 def about_view(request, *args, **kwargs):
     context = {
-        "title": "- About",
+        # "title": "- About",
     }
     return render(request, 'about.html', context)
 
