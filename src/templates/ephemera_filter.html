@@ -5,7 +5,7 @@
     <div class="px-5 py-1 mb-2 bg-light rounded-3">
         <div class="container-fluid py-5">
             <h1 class="display-6">Ephemera</h1>
-            <p class="col-md-8 fs-6">Not comprehensive: film, writing, podcast, music, TV & video, game, and art mentions of note discussed by Lex and his guests.</p>
+            <p class="col-md-8 fs-6">Non-book writing, film, podcast, music, TV & video, game, and art references of note from the Lex Fridman Podcast.</p>
         </div>
     </div>
     
@@ -97,7 +97,7 @@
                     <td>
                         {% for film in row.record.ephemera_set.all %}
                             {% if film.film %}
-                            <a href="{{ film.link }}">
+                            <a href="{{ film.link }}" target="_blank">
                                 <button type="button" class="btn btn-outline-primary btn-sm mt-1" title="{{ film.film }}">
                                     <i class="fa-solid fa-film" title="{{ film.film }}"></i>
                                     {{ film.film|truncatechars:10 }}
@@ -109,7 +109,7 @@
                     <td>
                         {% for paper in row.record.ephemera_set.all %}
                             {% if paper.paper %}
-                            <a href="{{ paper.link }}">
+                            <a href="{{ paper.link }}" target="_blank">
                                 <button type="button" class="btn btn-outline-dark btn-sm mt-1" title="{{ paper.paper }}">
                                     <i class="fa-solid fa-file-pen" id="fa_paper" title="{{ paper.paper }}"></i>
                                     {{ paper.paper|truncatechars:10 }}
@@ -121,7 +121,7 @@
                     <td>
                         {% for podcast in row.record.ephemera_set.all %}
                             {% if podcast.podcast %}
-                            <a href="{{ podcast.link }}">
+                            <a href="{{ podcast.link }}" target="_blank">
                                 <button type="button" class="btn btn-outline-info btn-sm mt-1" title="{{ paper.paper }}">
                                     <i class="fa-solid fa-podcast" id="fa_podcast" title="{{ podcast.podcast }}"></i>
                                     {{ podcast.podcast|truncatechars:10 }}
@@ -133,7 +133,7 @@
                     <td>
                         {% for music in row.record.ephemera_set.all %}
                             {% if music.music %}
-                            <a href="{{ music.link }}">
+                            <a href="{{ music.link }}" target="_blank">
                                 <button type="button" class="btn btn-outline-warning btn-sm mt-1" title="{{ music.music }}">
                                     <i class="fa-solid fa-music" title="{{ music.music }}"></i>
                                     {{ music.music|truncatechars:10 }}
@@ -145,7 +145,7 @@
                     <td>
                         {% for video in row.record.ephemera_set.all %}
                             {% if video.video %}
-                            <a href="{{ video.link }}">
+                            <a href="{{ video.link }}" target="_blank">
                                 <button type="button" class="btn btn-outline-danger btn-sm mt-1" title="{{ video.video }}">
                                     <i class="fa-solid fa-tv" title="{{ video.video }}"></i>
                                     {{ video.video|truncatechars:10 }}
@@ -157,7 +157,7 @@
                     <td>
                         {% for games in row.record.ephemera_set.all %}
                             {% if games.games %}
-                            <a href="{{ games.link }}">
+                            <a href="{{ games.link }}" target="_blank">
                                 <button type="button" class="btn btn-outline-secondary btn-sm mt-1" title="{{ games.games }}">
                                     <i class="fa-solid fa-gamepad" title="{{ games.games }}"></i>
                                     {{ games.games|truncatechars:10 }}
@@ -169,7 +169,7 @@
                     <td>
                         {% for art in row.record.ephemera_set.all %}
                             {% if art.art %}
-                            <a href="{{ art.link }}">
+                            <a href="{{ art.link }}" target="_blank">
                                 <button type="button" class="btn btn-outline-success btn-sm mt-1" title="{{ art.art }}">
                                     <i class="fa-solid fa-palette" title="{{ art.art }}"></i>
                                     {{ art.art|truncatechars:10 }}
