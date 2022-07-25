@@ -76,7 +76,7 @@
                         <td class="library-mention-td">
                             <div class="library-mentions">
                                 {% for mentions in row.record.mentions_set.all %}
-                                    <a href="{{ mentions.ment_ep.yt_url }}">{{ mentions.ment_ep.number }} | {{ mentions.ment_ep.guest1 }}</a>
+                                    <a href="https://www.lexopcit.com/episode_search?q={{ mentions.ment_ep.guest1 }}">{{ mentions.ment_ep.number }} | {{ mentions.ment_ep.guest1 }}</a>
                                 {% endfor %}
                             </div>
                         </td>
