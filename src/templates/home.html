@@ -30,9 +30,13 @@
                     </h6>
                     <p class="card-text">{{ episodes.title }}<br>
                         {% for mentions in episodes.mentions_set.all %}
-                            <a href="{{ mentions.ment_book.amzn_url }}" target="_blank">
-                                <img src="{{ mentions.ment_book.image }}" class="book-thumb" title="{{ mentions.ment_book.title }}" alt="{{ mentions.ment_book.title }}">
-                            </a>
+                            {% if mentions.ment_book.title == 'No Book Mentions' %}
+                                <p class="lead">No Book Mentions</p>
+                            {% else %}
+                                <a href="{{ mentions.ment_book.amzn_url }}" target="_blank">
+                                    <img src="{{ mentions.ment_book.image }}" class="book-thumb" title="{{ mentions.ment_book.title }}" alt="{{ mentions.ment_book.title }}">
+                                </a>
+                            {% endif %}
                         {% endfor %}
                     </p>
                 </div>
