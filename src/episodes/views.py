@@ -17,7 +17,7 @@ from .tables import BookTable, EpisodeTable
 class FilteredBooksListView(SingleTableMixin, FilterView):
     table = BookTable
     model = Book
-    queryset = Book.objects.all().order_by('author')
+    queryset = Book.objects.annotate(count=Count('mentions__ment_book')).all().order_by('-count')
     template_name = "book/library.html"
     filterset_class = BookFilter
 

@@ -14,8 +14,12 @@ class Episode(models.Model):
     yt_url      = models.TextField()
     tags        = models.TextField()
 
+    # class Meta:
+    #     ordering = ['-date']
+
     def __str__(self):
         return f"{self.number}|{self.date.strftime(' %b %d %Y')} : {self.guest1} - {self.title}"
+        
 
 class Book(models.Model):
     isbin1      = models.CharField(max_length=13)
@@ -34,6 +38,7 @@ class Mentions(models.Model):
     ment_book   = models.ForeignKey(Book, on_delete=models.CASCADE)
     class Meta:
         verbose_name_plural = "mentions"
+        ordering = ['-ment_ep__date']
 
     def __str__(self):
         return f"{self.ment_ep} --- {self.ment_book}"
