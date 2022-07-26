@@ -3,7 +3,7 @@
 {% block content %}
 
 {% comment %} <div class="container"> {% endcomment %}
-    <div id="content_wrapper" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 grid" page="{{page_number}}" data-masonry='{"percentPosition": true }'>
+    <div id="content_wrapper" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 grid" page="{{page_number}}" >
      {% comment %} data-masonry='{"percentPosition": true }' {% endcomment %}
         {% for episodes in episodes %}
         <div class="col mb-2">
@@ -47,11 +47,14 @@
 
     <script>
         $(window).on("load", function() {
+            if($(window).width() > 600) {
+            $('#content_wrapper').attr('data-masonry','{"percentPosition": true }');
             $(".grid").masonry('reloadItems');
             $(".grid").masonry('layout');
             $(".grid").imagesLoaded().progress(function() {
                 $(".grid").masonry('layout');
             });
+            }
         });
 
         $(document.body).on('touchmove', onScroll); // for mobile
