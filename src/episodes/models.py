@@ -14,13 +14,9 @@ class Episode(models.Model):
     yt_url      = models.TextField()
     tags        = models.TextField()
 
-    # class Meta:
-    #     ordering = ['-date']
-
     def __str__(self):
         return f"{self.number}|{self.date.strftime(' %b %d %Y')} : {self.guest1} - {self.title}"
         
-
 class Book(models.Model):
     isbin1      = models.CharField(max_length=13)
     isbin2      = models.CharField(max_length=13)
@@ -55,4 +51,3 @@ class Ephemera(models.Model):
     link        = models.TextField()
     class Meta:
         verbose_name_plural = "ephemera"
-
