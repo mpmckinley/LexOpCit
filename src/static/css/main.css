@@ -13,6 +13,7 @@ img.book-thumb {
 
 img.book-library-thumb {
     border-radius: 3px;
+    min-width: 75px;
     width: 100%;
     vertical-align: middle;
     margin-top: 2px;
