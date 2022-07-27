@@ -49,12 +49,17 @@
         $(window).on("load", function() {
             if($(window).width() > 600) {
             $('#content_wrapper').attr('data-masonry','{"percentPosition": true }');
-            $("#content_wrapper").masonry()
             $(".grid").masonry('reloadItems');
             $(".grid").masonry('layout');
             $(".grid").imagesLoaded().progress(function() {
                 $(".grid").masonry('layout');
             });
+            }
+        });
+
+        $(document).ready(function(){
+            if($(window).width() > 600) {
+                $("#content_wrapper").masonry()
             }
         });
 
