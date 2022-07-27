@@ -13,12 +13,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import imp
 from django.contrib import admin
 from django.urls import path
 
 from pages.views import home_view, about_view, search_view
 from episodes.views import (episode_library, episode_detail, book_detail, 
     ephemera_view, FilteredEphemeraListView, FilteredBooksListView)
+from episodes.sitemaps import StaticViewsSitemap
+from django.contrib.sitemaps.views import sitemap
+
+sitemaps={
+    'static': StaticViewsSitemap
+}
 
 urlpatterns = [
     path('', home_view, name='home'),
@@ -33,5 +40,6 @@ urlpatterns = [
     path('ephemera/', FilteredEphemeraListView.as_view(), name='ephemera'),
 
     path('about/', about_view, name='about'),
+    path('sitemap.xml', sitemap,{'sitemaps': sitemaps}),
     path('admin/', admin.site.urls),
 ]

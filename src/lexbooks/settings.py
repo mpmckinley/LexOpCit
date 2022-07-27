@@ -53,7 +53,12 @@ INSTALLED_APPS = [
     'django_filters',
     # own
     'episodes',
+    'django.contrib.sitemaps',
+    'django.contrib.sites'
+
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

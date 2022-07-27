@@ -60,6 +60,9 @@
         $(document).ready(function(){
             if($(window).width() > 600) {
                 $("#content_wrapper").masonry()
+                $(".grid").imagesLoaded().progress(function() {
+                    $(".grid").masonry('layout');
+                });
             }
         });
 
