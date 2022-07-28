@@ -1,6 +1,7 @@
 from itertools import groupby
 from multiprocessing import context
 from unittest import result
+from django.conf import settings
 from django.http import HttpResponse
 from django.shortcuts import render
 from episodes.models import Episode, Mentions, Ephemera
@@ -11,13 +12,14 @@ def home_view(request):
         page = int(request.GET.get('page'))
     except:
         page = 1
-    end = 20
+    end = settings.PAGINATION_SIZE
     start = int((page - 1) * end)
     end *= page
     episode_queryset = Episode.objects.prefetch_related('mentions_set').all().order_by('-date')[start:end]
     context = {
         'episodes': episode_queryset,
-        'page_number':page
+        'page_number':page,
+        'apply_infinite_scroll': 'yes'
     }
     # print(mention_queryset.query)
     # print(mention_queryset.query)

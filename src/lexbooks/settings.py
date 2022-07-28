@@ -157,3 +157,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #         'NAME':  os.path.join(BASE_DIR, 'db.sqlite3')
 #     }
 # }
+
+PAGINATION_SIZE = 20

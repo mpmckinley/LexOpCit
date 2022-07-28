@@ -11,15 +11,15 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ episodes.guest1 }}<br>
                         {% if episodes.guest2 %}
-                            {{ episodes.guest2 }}<br> 
+                            {{ episodes.guest2 }}<br>
                         {% endif %}
 
                         {% if episodes.guest3 %}
-                            {{ episodes.guest3 }}<br> 
+                            {{ episodes.guest3 }}<br>
                             {% endif %}
 
                         {% if episodes.guest4 %}
-                            {{ episodes.guest4 }}<br> 
+                            {{ episodes.guest4 }}<br>
                         {% endif %}
 
                     </h5>
@@ -67,7 +67,7 @@
         });
 
         $(document.body).on('touchmove', onScroll); // for mobile
-        $(window).on('scroll', onScroll); 
+        $(window).on('scroll', onScroll);
 
         var scrolltrigger = 0;
 
@@ -82,38 +82,36 @@
                 scrolltrigger = 1;
                 var page = $("#content_wrapper").attr('page');
                 page++;
-                $.ajax({
-                url: "",
-                // async: true,
-                data: {
-                    'page':page
-                },
-                type: "GET",
-                success: function(data) {
-                        var data1 = jQuery(data).filter("#content_wrapper").html();
-                        if (typeof (data1) == "undefined") { data1 = jQuery("#content_wrapper > *", data); }
-                        if(data1.length>0){
-                            $("#content_wrapper").append(data1);
-                            $("#content_wrapper").attr('page',page);
-                            // $(".grid").append(new_items);
-                            if($(window).width() > 600) {
-                                $(".grid").masonry('reloadItems');
-                                $(".grid").masonry('layout');
-                                $(".grid").imagesLoaded().progress(function() {
+                if("{{apply_infinite_scroll}}"=='yes'){
+                    $.ajax({
+                        url: "",
+                        data: {
+                            'page':page
+                        },
+                        type: "GET",
+                        success: function(data) {
+                            var data1 = jQuery(data).filter("#content_wrapper").html();
+                            if (typeof (data1) == "undefined") { data1 = jQuery("#content_wrapper > *", data); }
+                            if(data1.length>0){
+                                $("#content_wrapper").append(data1);
+                                $("#content_wrapper").attr('page',page);
+                                // $(".grid").append(new_items);
+                                if($(window).width() > 600) {
+                                    $(".grid").masonry('reloadItems');
                                     $(".grid").masonry('layout');
-                                });
-                            }
-                            // setTimeout(function(){
+                                    $(".grid").imagesLoaded().progress(function() {
+                                        $(".grid").masonry('layout');
+                                    });
+                                }
                                 scrolltrigger = 0;
-                            // },2000);
+                            }
+                        },
+                        error: function() {
+                            scrolltrigger = 0;
+                            console.log("Error");
                         }
-                    // }
-                },
-                error: function() {
-                    scrolltrigger = 0;
-                    console.log("Error");
+                    });
                 }
-            });
             }
             else
             {
