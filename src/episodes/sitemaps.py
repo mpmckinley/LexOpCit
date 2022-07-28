@@ -4,6 +4,8 @@ from django.contrib import sitemaps
 from django.shortcuts import reverse
 from django.core.paginator import Paginator
 from .models import *
+import urllib.parse
+
 
 class StaticViewsSitemap(sitemaps.Sitemap):
 
@@ -83,8 +85,8 @@ class MentionsSitemap(sitemaps.Sitemap):
 
     def location(self, data):
         guest = data.guest1
-        guest = guest.replace(" ", "%20")
-        return "/episode_search?q="+str(guest)
+        safe_string = urllib.parse.quote(guest)
+        return "/episode_search?q="+str(safe_string)
     
     def lastmod(self, obj):
         return datetime.datetime.now()
