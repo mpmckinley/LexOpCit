@@ -20,25 +20,19 @@ from django.urls import path, include
 from pages.views import home_view, about_view, search_view
 from episodes.views import (episode_library, episode_detail, book_detail, 
     ephemera_view, FilteredEphemeraListView, FilteredBooksListView)
-from episodes.sitemaps import StaticViewsSitemap , EpisodeSitemap
+from episodes.sitemaps import StaticViewsSitemap , EpisodeSitemap, EphemeraSitemap , BookSitemap,  MentionsSitemap
 from django.contrib.sitemaps.views import sitemap
-
-app_name = "myapp"
-
 
 sitemaps={
     'static': StaticViewsSitemap,
-    # 'Ephemera': EphemeraSitemap,
+    'Ephemera': EphemeraSitemap,
     'Episode': EpisodeSitemap,
-    # 'Book': BookSitemap,
-    # 'Mentions': MentionsSitemap,
-
-
+    'Book': BookSitemap,
+    'Mentions': MentionsSitemap
 }
 
 urlpatterns = [
     path('', home_view, name='home'),
-
     path('episode_search', search_view, name="episode-search"),
     path('library/', FilteredBooksListView.as_view(), name='books'),
     path('library/<int:pk>/', book_detail, name='book_detail'),
@@ -48,7 +42,6 @@ urlpatterns = [
 
     # path('ephemera/', ephemera_view, name='ephemera'),
     path('ephemera/', FilteredEphemeraListView.as_view(), name='ephemera'),
-
     path('about/', about_view, name='about'),
     path('sitemap.xml', sitemap,{'sitemaps': sitemaps},name='django.contrib.sitemaps.views.sitemap'),
     path('admin/', admin.site.urls),

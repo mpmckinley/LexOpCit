@@ -1,14 +1,13 @@
-from distutils.util import change_root
+import datetime
 from django.conf import settings
 from django.contrib import sitemaps
 from django.shortcuts import reverse
 from django.core.paginator import Paginator
-from .urls import app_name
 from .models import *
 
 class StaticViewsSitemap(sitemaps.Sitemap):
 
-    priority = 0.5
+    priority = .8
     changefreq = "daily"
 
     def items(self):
@@ -18,67 +17,74 @@ class StaticViewsSitemap(sitemaps.Sitemap):
     
     def location(self, item):
         return reverse(item)
+    
+    def lastmod(self, obj):
+        return datetime.datetime.now()
+
 
 class EpisodeSitemap(sitemaps.Sitemap):
 
     changefreq = "daily"
-    priority = 0.5
+    priority = 1.0
 
     def items(self):
         objects = Episode.objects.all()
         paginator = Paginator(objects, settings.PAGINATION_SIZE)
         return paginator.page_range
-
-    # def lastmod(self, obj):
-    #     return obj.episode_number
     
     def location(self, page_no):
         return "/?page="+str(page_no)
 
+    def lastmod(self, obj):
+        return datetime.datetime.now()
+
+
+class EphemeraSitemap(sitemaps.Sitemap):
+
+    changefreq = "daily"
+    priority = .8
+
+    def items(self):
+        objects = Ephemera.objects.all()
+        paginator = Paginator(objects, settings.LIBRARY_EPHEMERA_PAGINATION_SIZE)
+        return paginator.page_range
     
-    # def location(self, obj):
-    #     return '/Episode' % (obj.episode_number)
-
-# class BookSitemap(sitemaps.Sitemap):
-
-#     changefreq = "daily"
-#     priority = 0.5
-
-#     def items(self):
-#         return  Book.objects.all()
+    def location(self, page_no):
+        return "/ephemera/?page="+str(page_no)
     
-#     def lastmod(self, obj):
-#         return obj.book_title
+    def lastmod(self, obj):
+        return datetime.datetime.now()
     
-#     def location(self, obj):
-#         return '/Book' % (obj.book_title)
-        
-# class MentionsSitemap(sitemaps.Sitemap):
 
-#     changefreq = "daily"
-#     priority = 0.5
+class BookSitemap(sitemaps.Sitemap):
 
-#     def items(self):
-#         return  Mentions.objects.all()
+    changefreq = "daily"
+    priority = 0.8
+
+    def items(self):
+        objects = Book.objects.all()
+        paginator = Paginator(objects, settings.LIBRARY_EPHEMERA_PAGINATION_SIZE)
+        return paginator.page_range
     
-#     def lastmod(self, obj):
-#         return obj.mentions_ment_ep
+    def location(self, page_no):
+        return "/library/?page="+str(page_no)
     
-#     def location(self, obj):
-#         return '/Mentions' % (obj.mentions_ment_ep)
+    def lastmod(self, obj):
+        return datetime.datetime.now()
 
-# class EphemeraSitemap(sitemaps.Sitemap):
 
-#     changefreq = "daily"
-#     priority = 0.5
+class MentionsSitemap(sitemaps.Sitemap):
 
-#     def items(self):
-#         return  Ephemera.objects.all()
+    changefreq = "daily"
+    priority = 0.8
+
+    def items(self):
+        return Episode.objects.all()
+
+    def location(self, data):
+        guest = data.guest1
+        guest = guest.replace(" ", "%20")
+        return "/episode_search?q="+str(guest)
     
-#     def lastmod(self, obj):
-#         return obj.ephemera.eph_ep
-    
-#     def location(self, obj):
-#         return '/Ephemera' % (obj.ephemera.eph_ep )
-
-        
+    def lastmod(self, obj):
+        return datetime.datetime.now()

@@ -16,10 +16,6 @@ class Episode(models.Model):
 
     def __str__(self):
         return f"{self.number}|{self.date.strftime(' %b %d %Y')} : {self.guest1} - {self.title}"
-
-    def get_absolute_url(self):
-        return f'/{self.number}/'
-    
         
 class Book(models.Model):
     isbin1      = models.CharField(max_length=13)
@@ -32,9 +28,6 @@ class Book(models.Model):
 
     def __str__(self):
         return f"{self.id} : {self.title} - {self.author}"
-    
-    def get_absolute_url(self):
-        return f'/{self.title}/'
 
 class Mentions(models.Model):
     ment_ep     = models.ForeignKey(Episode, on_delete=models.CASCADE)
@@ -45,9 +38,6 @@ class Mentions(models.Model):
 
     def __str__(self):
         return f"{self.ment_ep} --- {self.ment_book}"
-    
-    def get_absolute_url(self):
-        return f'/{self.ment_ep}/'
 
 class Ephemera(models.Model):
     eph_ep      = models.ForeignKey(Episode, on_delete=models.CASCADE)
@@ -61,6 +51,3 @@ class Ephemera(models.Model):
     link        = models.TextField()
     class Meta:
         verbose_name_plural = "ephemera"
-    
-    def get_absolute_url(self):
-        return f'/{self.eph_ep}/'
