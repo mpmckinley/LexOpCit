@@ -31,9 +31,15 @@ def search_view(request):
         title__icontains=phrase)
     guest1_qs = Episode.objects.prefetch_related('mentions_set').filter(
         guest1__icontains=phrase)
+    guest2_qs = Episode.objects.prefetch_related('mentions_set').filter(
+        guest2__icontains=phrase)
+    guest3_qs = Episode.objects.prefetch_related('mentions_set').filter(
+        guest3__icontains=phrase)
+    guest4_qs = Episode.objects.prefetch_related('mentions_set').filter(
+        guest4__icontains=phrase)
     number_qs = Episode.objects.prefetch_related('mentions_set').filter(
         number__iexact=phrase)
-    episode_queryset = (title_qs | guest1_qs | number_qs).distinct().order_by('-date')
+    episode_queryset = (title_qs | guest1_qs | guest2_qs | guest3_qs | guest4_qs | number_qs).distinct().order_by('-date')
     context = {
         'episodes': episode_queryset,
     }
