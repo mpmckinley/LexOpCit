@@ -63,6 +63,10 @@ a[href ^= 'https://amzn.to/'] {
     text-decoration: none;
 }
 
+a[href ^= 'https://prf.hn/'] {
+    text-decoration: none;
+}
+
 a.no-line {
     text-decoration: none;
 }
